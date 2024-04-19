@@ -1,0 +1,62 @@
+[
+  {
+    "name": "cart",
+    "path": "/cart",
+    "component": "C:\\\\Users\\\\hp\\\\Documents\\\\SALMIA\\\\pages\\\\cart\\\\index.vue",
+    "chunkName": "pages/cart/index"
+  },
+  {
+    "name": "error",
+    "path": "/error",
+    "component": "C:\\\\Users\\\\hp\\\\Documents\\\\SALMIA\\\\pages\\\\error.vue",
+    "chunkName": "pages/error"
+  },
+  {
+    "name": "thanks",
+    "path": "/thanks",
+    "component": "C:\\\\Users\\\\hp\\\\Documents\\\\SALMIA\\\\pages\\\\thanks\\\\index.vue",
+    "chunkName": "pages/thanks/index"
+  },
+  {
+    "name": "wishlist",
+    "path": "/wishlist",
+    "component": "C:\\\\Users\\\\hp\\\\Documents\\\\SALMIA\\\\pages\\\\wishlist\\\\index.vue",
+    "chunkName": "pages/wishlist/index"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\hp\\\\Documents\\\\SALMIA\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
+  },
+  {
+    "name": "account-route",
+    "path": "/account/:route?",
+    "component": "C:\\\\Users\\\\hp\\\\Documents\\\\SALMIA\\\\pages\\\\account\\\\_route.vue",
+    "chunkName": "pages/account/_route"
+  },
+  {
+    "name": "pages-slug",
+    "path": "/pages/:slug?",
+    "component": "C:\\\\Users\\\\hp\\\\Documents\\\\SALMIA\\\\pages\\\\pages\\\\_slug.vue",
+    "chunkName": "pages/pages/_slug"
+  },
+  {
+    "name": "posts-slug",
+    "path": "/posts/:slug?",
+    "component": "C:\\\\Users\\\\hp\\\\Documents\\\\SALMIA\\\\pages\\\\posts\\\\_slug.vue",
+    "chunkName": "pages/posts/_slug"
+  },
+  {
+    "name": "products-slug",
+    "path": "/products/:slug?",
+    "component": "C:\\\\Users\\\\hp\\\\Documents\\\\SALMIA\\\\pages\\\\products\\\\_slug.vue",
+    "chunkName": "pages/products/_slug"
+  },
+  {
+    "name": "shop-slug",
+    "path": "/shop/:slug?",
+    "component": "C:\\\\Users\\\\hp\\\\Documents\\\\SALMIA\\\\pages\\\\shop\\\\_slug.vue",
+    "chunkName": "pages/shop/_slug"
+  }
+]

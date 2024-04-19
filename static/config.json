@@ -1,0 +1,3571 @@
+{
+    "team": {
+        "_id": "5f21374a175b5e8e309be358",
+        "name": "STOREINO",
+        "url": "https://market.storeino.com/storeino/"
+    },
+    "config": {
+        "schema": {
+            "fields": {
+                "products": [
+                    "name",
+                    "slug",
+                    "images",
+                    "price",
+                    "variants",
+                    "outStock",
+                    "type",
+                    "quantity",
+                    "tags",
+                    "collections.name",
+                    "collections.slug",
+                    "collections.image",
+                    "translates"
+                ],
+                "collections": [
+                    "name",
+                    "slug",
+                    "image",
+                    "translates",
+                    "childrens"
+                ],
+                "images": [
+                    "src",
+                    "title"
+                ],
+                "menus": [],
+                "pages": [],
+                "brands": []
+            },
+            "ids": {
+                "collections": [],
+                "products": [],
+                "images": [],
+                "menus": [],
+                "pages": [],
+                "brands": []
+            }
+        },
+        "settings": {
+            "tabs": [
+                {
+                    "name": "header_page",
+                    "sections": [
+                        {
+                            "name": "navbar",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "menu",
+                                    "values": [
+                                        {
+                                            "name": "menu",
+                                            "note": "",
+                                            "path": "sections.navbar.menu",
+                                            "type": "tc_menu",
+                                            "translatable": false,
+                                            "value": null
+                                        },
+                                        {
+                                            "name": "show_menu",
+                                            "note": "",
+                                            "path": "sections.navbar.active_menu",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "language_icon",
+                                            "note": "",
+                                            "path": "sections.navbar.language_icon",
+                                            "type": "tc_image",
+                                            "translatable": false,
+                                            "value": null
+                                        },
+                                        {
+                                            "name": "currency_icon",
+                                            "note": "",
+                                            "path": "sections.navbar.currency_icon",
+                                            "type": "tc_image",
+                                            "translatable": false,
+                                            "value": null
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "logo",
+                                    "values": [
+                                        {
+                                            "name": "logo",
+                                            "note": "",
+                                            "path": "sections.navbar.logo",
+                                            "type": "tc_image",
+                                            "translatable": false,
+                                            "value": null
+                                        },
+                                        {
+                                            "name": "show_logo",
+                                            "note": "",
+                                            "path": "sections.navbar.active_logo",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "company_name",
+                                            "note": "",
+                                            "path": "sections.navbar.name",
+                                            "type": "tc_input",
+                                            "translatable": false,
+                                            "value": "SALMIA"
+                                        },
+                                        {
+                                            "name": "show_name",
+                                            "note": "",
+                                            "path": "sections.navbar.active_name",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "banner",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "banner_info",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "sections.banner.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Book Your Luxury Ride",
+                                            "translate": "Book Your Luxury Ride"
+                                        },
+                                        {
+                                            "name": "description",
+                                            "note": "",
+                                            "path": "sections.banner.description",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": " Indulge in luxury with our carefully selected premium car fleet, available at attractive rates",
+                                            "translate": " Indulge in luxury with our carefully selected premium car fleet, available at attractive rates"
+                                        },
+                                        {
+                                            "name": "show_description",
+                                            "note": "",
+                                            "path": "sections.banner.show_description",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "formuler",
+                                    "values": [
+                                        {
+                                            "name": "pick_up_date",
+                                            "note": "",
+                                            "path": "sections.form.pickup_date",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "PICK UP DATE",
+                                            "translate": "PICK UP DATE"
+                                        },
+                                        {
+                                            "name": "drop_off_date",
+                                            "note": "",
+                                            "path": "sections.form.dropoff_date",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "DROP OFF DATE",
+                                            "translate": "DROP OFF DATE"
+                                        },
+                                        {
+                                            "name": "brands_title",
+                                            "note": "",
+                                            "path": "sections.form.brands_title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "BRANDS OF VEHICLE",
+                                            "translate": "BRANDS OF VEHICLE"
+                                        },
+                                        {
+                                            "name": "find_it",
+                                            "note": "",
+                                            "path": "sections.form.find",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "FIND IT NOW",
+                                            "translate": "FIND IT NOW"
+                                        },
+                                        {
+                                            "name": "show_formuler",
+                                            "note": "",
+                                            "path": "sections.form.active",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "pick_up_adresse",
+                                            "note": "",
+                                            "path": "sections.form.pickup_adresse",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "PICK UP ADRESSE",
+                                            "translate": "PICK UP ADRESSE"
+                                        },
+                                        {
+                                            "name": "show_brands",
+                                            "note": "",
+                                            "path": "sections.form.show_brands",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                }
+                            ],
+                            "pushable": false
+                        },
+                        {
+                            "name": "background_image",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "background_image",
+                                    "values": [
+                                        {
+                                            "name": "image",
+                                            "note": "",
+                                            "path": "sections.banner.background_img",
+                                            "type": "tc_image",
+                                            "translatable": false,
+                                            "value": null
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "home_page",
+                    "sections": [
+                        {
+                            "name": "benefints",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "section_intro",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "sections.benefits.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": " OUR BENEFITS",
+                                            "translate": " OUR BENEFITS"
+                                        },
+                                        {
+                                            "name": "show_title",
+                                            "note": "",
+                                            "path": "sections.benefits.show_title",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "description",
+                                            "note": "",
+                                            "path": "sections.benefits.description",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Luxury CarRental Rental Services",
+                                            "translate": "Luxury CarRental Rental Services"
+                                        },
+                                        {
+                                            "name": "show_description",
+                                            "note": "",
+                                            "path": "sections.benefits.show_description",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ],
+                                    "fixed": true
+                                },
+                                {
+                                    "name": "show_section",
+                                    "values": [
+                                        {
+                                            "name": "sow_section",
+                                            "note": "",
+                                            "path": "sections.benefits.show_section",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ],
+                                    "fixed": true
+                                },
+                                {
+                                    "name": "items[0]",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "path": "sections.benefits.items.item_0.title",
+                                            "type": "tc_input",
+                                            "value": "Benefits Title",
+                                            "translatable": true,
+                                            "translate": "Benefits Title"
+                                        },
+                                        {
+                                            "name": "description",
+                                            "path": "sections.benefits.items.item_0.description",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Benefits Description",
+                                            "translate": "Benefits Description"
+                                        },
+                                        {
+                                            "name": "icon",
+                                            "note": "",
+                                            "path": "sections.benefits.items.item_0.icon",
+                                            "type": "tc_image",
+                                            "translatable": false,
+                                            "value": null
+                                        },
+                                        {
+                                            "name": "show_icon",
+                                            "note": "",
+                                            "path": "sections.benefits.items.item_0.show_icon",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "show_description",
+                                            "note": "",
+                                            "path": "sections.benefits.items.item_0.show_description",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "items[1]",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "path": "sections.benefits.items.item_1.title",
+                                            "type": "tc_input",
+                                            "value": "Benefits Title",
+                                            "translatable": true,
+                                            "translate": "Benefits Title"
+                                        },
+                                        {
+                                            "name": "description",
+                                            "path": "sections.benefits.items.item_1.description",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Benefits Description",
+                                            "translate": "Benefits Description"
+                                        },
+                                        {
+                                            "name": "icon",
+                                            "note": "",
+                                            "path": "sections.benefits.items.item_1.icon",
+                                            "type": "tc_image",
+                                            "translatable": false,
+                                            "value": null
+                                        },
+                                        {
+                                            "name": "show_icon",
+                                            "note": "",
+                                            "path": "sections.benefits.items.item_1.show_icon",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "show_description",
+                                            "note": "",
+                                            "path": "sections.benefits.items.item_1.show_description",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "items[2]",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "path": "sections.benefits.items.item_2.title",
+                                            "type": "tc_input",
+                                            "value": "Benefits Title",
+                                            "translatable": true,
+                                            "translate": "Benefits Title"
+                                        },
+                                        {
+                                            "name": "description",
+                                            "path": "sections.benefits.items.item_2.description",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Benefits Description",
+                                            "translate": "Benefits Description"
+                                        },
+                                        {
+                                            "name": "icon",
+                                            "note": "",
+                                            "path": "sections.benefits.items.item_2.icon",
+                                            "type": "tc_image",
+                                            "translatable": false,
+                                            "value": null
+                                        },
+                                        {
+                                            "name": "show_icon",
+                                            "note": "",
+                                            "path": "sections.benefits.items.item_2.show_icon",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "show_description",
+                                            "note": "",
+                                            "path": "sections.benefits.items.item_2.show_description",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                }
+                            ],
+                            "pushable": true,
+                            "default": {
+                                "name": "items[9]",
+                                "values": [
+                                    {
+                                        "name": "title",
+                                        "path": "sections.benefits.items.item_9.title",
+                                        "type": "tc_input",
+                                        "value": "Benefits Title",
+                                        "translatable": true
+                                    },
+                                    {
+                                        "name": "description",
+                                        "path": "sections.benefits.items.item_9.description",
+                                        "type": "tc_input",
+                                        "translatable": true,
+                                        "value": "Benefits Description"
+                                    },
+                                    {
+                                        "name": "icon",
+                                        "note": "",
+                                        "path": "sections.benefits.items.item_9.icon",
+                                        "type": "tc_image",
+                                        "translatable": false,
+                                        "value": null
+                                    },
+                                    {
+                                        "name": "show_icon",
+                                        "note": "",
+                                        "path": "sections.benefits.items.item_9.show_icon",
+                                        "type": "tc_checkbox",
+                                        "translatable": false,
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "show_description",
+                                        "note": "",
+                                        "path": "sections.benefits.items.item_9.show_description",
+                                        "type": "tc_checkbox",
+                                        "translatable": false,
+                                        "value": true
+                                    }
+                                ]
+                            }
+                        }
+                        ,
+                        {
+                            "name": "guides",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "title",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "sections.guide.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": " HOW DOES THE CarRental RENTAL WORKS",
+                                            "translate": " HOW DOES THE CarRental RENTAL WORKS"
+                                        },
+                                        {
+                                            "name": "show_title",
+                                            "note": "",
+                                            "path": "sections.guide.show_title",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ],
+                                    "fixed": true
+                                },
+                                {
+                                    "name": "show_section",
+                                    "values": [
+                                        {
+                                            "name": "show_section",
+                                            "note": "",
+                                            "path": "sections.guide.show",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ],
+                                    "fixed": true
+                                },
+                                {
+                                    "name": "background_image",
+                                    "values": [
+                                        {
+                                            "name": "background_image",
+                                            "note": "",
+                                            "path": "sections.guide.background_image",
+                                            "type": "tc_image",
+                                            "translatable": false,
+                                            "value": null
+                                        }
+                                    ],
+                                    "fixed": true
+                                },
+                                {
+                                    "name": "items[0]",
+                                    "values": [
+                                        {
+                                            "name": "info",
+                                            "path": "sections.giudes.items.item_0.info",
+                                            "type": "tc_input",
+                                            "value": "Browse and Select",
+                                            "translatable": true,
+                                            "translate": "Browse and Select"
+                                        },
+                                        {
+                                            "name": "show_info",
+                                            "path": "sections.giudes.items.item_0.show_info",
+                                            "type": "tc_checkbox",
+                                            "translatable": true,
+                                            "value": true,
+                                            "translate": true
+                                        },
+                                        {
+                                            "name": "icon",
+                                            "note": "",
+                                            "path": "sections.giudes.items.item_0.icon",
+                                            "type": "tc_image",
+                                            "translatable": false,
+                                            "value": null
+                                        },
+                                        {
+                                            "name": "show_icon",
+                                            "note": "",
+                                            "path": "sections.giudes.items.item_0.show_icon",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "items[1]",
+                                    "values": [
+                                        {
+                                            "name": "info",
+                                            "path": "sections.giudes.items.item_1.info",
+                                            "type": "tc_input",
+                                            "value": "Reservation and Booking",
+                                            "translatable": true,
+                                            "translate": "Reservation and Booking"
+                                        },
+                                        {
+                                            "name": "show_info",
+                                            "path": "sections.giudes.items.item_1.show_info",
+                                            "type": "tc_checkbox",
+                                            "translatable": true,
+                                            "value": true,
+                                            "translate": true
+                                        },
+                                        {
+                                            "name": "icon",
+                                            "note": "",
+                                            "path": "sections.giudes.items.item_1.icon",
+                                            "type": "tc_image",
+                                            "translatable": false,
+                                            "value": null
+                                        },
+                                        {
+                                            "name": "show_icon",
+                                            "note": "",
+                                            "path": "sections.giudes.items.item_1.show_icon",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "items[2]",
+                                    "values": [
+                                        {
+                                            "name": "info",
+                                            "path": "sections.giudes.items.item_2.info",
+                                            "type": "tc_input",
+                                            "value": "Pickup and Enjoy",
+                                            "translatable": true,
+                                            "translate": "Pickup and Enjoy"
+                                        },
+                                        {
+                                            "name": "show_info",
+                                            "path": "sections.giudes.items.item_2.show_info",
+                                            "type": "tc_checkbox",
+                                            "translatable": true,
+                                            "value": true,
+                                            "translate": true
+                                        },
+                                        {
+                                            "name": "icon",
+                                            "note": "",
+                                            "path": "sections.giudes.items.item_2.icon",
+                                            "type": "tc_image",
+                                            "translatable": false,
+                                            "value": null
+                                        },
+                                        {
+                                            "name": "show_icon",
+                                            "note": "",
+                                            "path": "sections.giudes.items.item_2.show_icon",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                }
+                            ],
+                            "pushable": true,
+                            "default": {
+                                "name": "items[9]",
+                                "values": [
+                                    {
+                                        "name": "info",
+                                        "path": "sections.giudes.items.item_9.info",
+                                        "type": "tc_input",
+                                        "value": "Guide Information",
+                                        "translatable": true
+                                    },
+                                    {
+                                        "name": "show_info",
+                                        "path": "sections.giudes.items.item_9.show_info",
+                                        "type": "tc_checkbox",
+                                        "translatable": true,
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "icon",
+                                        "note": "",
+                                        "path": "sections.giudes.items.item_9.icon",
+                                        "type": "tc_image",
+                                        "translatable": false,
+                                        "value": null
+                                    },
+                                    {
+                                        "name": "show_icon",
+                                        "note": "",
+                                        "path": "sections.giudes.items.item_9.show_icon",
+                                        "type": "tc_checkbox",
+                                        "translatable": false,
+                                        "value": true
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "fleets",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "section_intro",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "sections.fleets.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "OUR RENTAL FLEETS",
+                                            "translate": "OUR RENTAL FLEETS"
+                                        },
+                                        {
+                                            "name": "show_title",
+                                            "note": "",
+                                            "path": "sections.fleets.show_title",
+                                            "type": "tc_checkbox",
+                                            "translatable": true,
+                                            "value": true,
+                                            "translate": true
+                                        },
+                                        {
+                                            "name": "description",
+                                            "note": "",
+                                            "path": "sections.fleets.description",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Amco laboris nisi ut aliquip xea comod consequt duis aute irure dolor reprehenderit voluptate velit cillum dolore fugiat lore ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt",
+                                            "translate": "Amco laboris nisi ut aliquip xea comod consequt duis aute irure dolor reprehenderit voluptate velit cillum dolore fugiat lore ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt"
+                                        },
+                                        {
+                                            "name": "show_description",
+                                            "note": "",
+                                            "path": "sections.fleets.show_description",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "under_title",
+                                            "note": "",
+                                            "path": "sections.fleets.under_title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Luxury SALMIA Rental Services",
+                                            "translate": "Luxury SALMIA Rental Services"
+                                        },
+                                        {
+                                            "name": "show_under_title",
+                                            "note": "",
+                                            "path": "sections.fleets.show_under_title",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "cars_block",
+                                    "values": [
+                                        {
+                                            "name": "cars",
+                                            "note": "",
+                                            "path": "sections.fleets.cars",
+                                            "type": "tc_product",
+                                            "translatable": false,
+                                            "value": null
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "show_section",
+                                    "values": [
+                                        {
+                                            "name": "show_section",
+                                            "note": "",
+                                            "path": "sections.fleets.active",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "services",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "section_intro",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "sections.services.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "CarRental Rental Service With a wide range of Vehicles",
+                                            "translate": "CarRental Rental Service With a wide range of Vehicles"
+                                        },
+                                        {
+                                            "name": "description",
+                                            "note": "",
+                                            "path": "sections.services.description",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Integer tortor bibendum est faucibus gravida aliquam nulla lectus lacinia eget lorem acdua eros pharetral interdum quisque convallis nula dpsum val mualiq amet consectetur adipisicing sed eiusmod tem pory.  Ut enim ad minim ven quis nostrud exercitation ulamco laboris nisi ut aliquip exl dolor in reprehenderit voluptate velit non proident sunt in culpa.",
+                                            "translate": "Integer tortor bibendum est faucibus gravida aliquam nulla lectus lacinia eget lorem acdua eros pharetral interdum quisque convallis nula dpsum val mualiq amet consectetur adipisicing sed eiusmod tem pory.  Ut enim ad minim ven quis nostrud exercitation ulamco laboris nisi ut aliquip exl dolor in reprehenderit voluptate velit non proident sunt in culpa."
+                                        },
+                                        {
+                                            "name": "show_title",
+                                            "note": "",
+                                            "path": "sections.services.show_title",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "show_description",
+                                            "note": "",
+                                            "path": "sections.services.show_description",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ],
+                                    "fixed": true
+                                },
+                                {
+                                    "name": "right_side_images",
+                                    "values": [
+                                        {
+                                            "name": "image_1",
+                                            "note": "",
+                                            "path": "sections.services.image_1",
+                                            "type": "tc_image",
+                                            "translatable": false,
+                                            "value": null
+                                        },
+                                        {
+                                            "name": "image_2",
+                                            "note": "",
+                                            "path": "sections.services.image_2",
+                                            "type": "tc_image",
+                                            "translatable": false,
+                                            "value": null
+                                        },
+                                        {
+                                            "name": "image_3",
+                                            "note": "",
+                                            "path": "sections.services.image_3",
+                                            "type": "tc_image",
+                                            "translatable": false,
+                                            "value": null
+                                        },
+                                        {
+                                            "name": "show_image_1",
+                                            "note": "",
+                                            "path": "sections.services.show_image_1",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "show_image_2",
+                                            "note": "",
+                                            "path": "sections.services.show_image_2",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "show_image_3",
+                                            "note": "",
+                                            "path": "sections.services.show_image_3",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ],
+                                    "fixed": true
+                                },
+                                {
+                                    "name": "show_section",
+                                    "values": [
+                                        {
+                                            "name": "show_section",
+                                            "note": "",
+                                            "path": "sections.services.show_section",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ],
+                                    "fixed": true
+                                },
+                                {
+                                    "name": "items[0]",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "path": "sections.services.items.item_0.title",
+                                            "type": "tc_input",
+                                            "value": "Easy & Competitive Prices",
+                                            "translatable": true,
+                                            "translate": "Easy & Competitive Prices"
+                                        },
+                                        {
+                                            "name": "description",
+                                            "path": "sections.services.items.item_0.description",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Amco laboris nisi ut aliquip xea comod consequt duis aute irure dolor reprehenderit voluptate velit cillum dolore fugiat lore ipsum dolor sit amet consectetur adipisicing elit",
+                                            "translate": "Amco laboris nisi ut aliquip xea comod consequt duis aute irure dolor reprehenderit voluptate velit cillum dolore fugiat lore ipsum dolor sit amet consectetur adipisicing elit"
+                                        },
+                                        {
+                                            "name": "icon",
+                                            "note": "",
+                                            "path": "sections.services.items.item_0.icon",
+                                            "type": "tc_image",
+                                            "translatable": false,
+                                            "value": null
+                                        },
+                                        {
+                                            "name": "show_title",
+                                            "note": "",
+                                            "path": "sections.services.items.item_0.show_title",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "show_description",
+                                            "note": "",
+                                            "path": "sections.services.items.item_0.show_description",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "show_icon",
+                                            "note": "",
+                                            "path": "sections.services.items.item_0.show_icon",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "items[1]",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "path": "sections.services.items.item_1.title",
+                                            "type": "tc_input",
+                                            "value": "Breakdown Assistance",
+                                            "translatable": true,
+                                            "translate": "Breakdown Assistance"
+                                        },
+                                        {
+                                            "name": "description",
+                                            "path": "sections.services.items.item_1.description",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Amco laboris nisi ut aliquip xea comod consequt duis aute irure dolor reprehenderit voluptate velit cillum dolore fugiat lore ipsum dolor sit amet consectetur adipisicing elit",
+                                            "translate": "Amco laboris nisi ut aliquip xea comod consequt duis aute irure dolor reprehenderit voluptate velit cillum dolore fugiat lore ipsum dolor sit amet consectetur adipisicing elit"
+                                        },
+                                        {
+                                            "name": "icon",
+                                            "note": "",
+                                            "path": "sections.services.items.item_1.icon",
+                                            "type": "tc_image",
+                                            "translatable": false,
+                                            "value": null
+                                        },
+                                        {
+                                            "name": "show_title",
+                                            "note": "",
+                                            "path": "sections.services.items.item_1.show_title",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "show_description",
+                                            "note": "",
+                                            "path": "sections.services.items.item_1.show_description",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "show_icon",
+                                            "note": "",
+                                            "path": "sections.services.items.item_1.show_icon",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "items[2]",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "path": "sections.services.items.item_2.title",
+                                            "type": "tc_input",
+                                            "value": "Trusted Rent Service",
+                                            "translatable": true,
+                                            "translate": "Trusted Rent Service"
+                                        },
+                                        {
+                                            "name": "description",
+                                            "path": "sections.services.items.item_2.description",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Amco laboris nisi ut aliquip xea comod consequt duis aute irure dolor reprehenderit voluptate velit cillum dolore fugiat lore ipsum dolor sit amet consectetur adipisicing elit",
+                                            "translate": "Amco laboris nisi ut aliquip xea comod consequt duis aute irure dolor reprehenderit voluptate velit cillum dolore fugiat lore ipsum dolor sit amet consectetur adipisicing elit"
+                                        },
+                                        {
+                                            "name": "icon",
+                                            "note": "",
+                                            "path": "sections.services.items.item_2.icon",
+                                            "type": "tc_image",
+                                            "translatable": false,
+                                            "value": null
+                                        },
+                                        {
+                                            "name": "show_title",
+                                            "note": "",
+                                            "path": "sections.services.items.item_2.show_title",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "show_description",
+                                            "note": "",
+                                            "path": "sections.services.items.item_2.show_description",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "show_icon",
+                                            "note": "",
+                                            "path": "sections.services.items.item_2.show_icon",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "items[3]",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "path": "sections.services.items.item_3.title",
+                                            "type": "tc_input",
+                                            "value": "24/7 Free Customer Support",
+                                            "translatable": true,
+                                            "translate": "24/7 Free Customer Support"
+                                        },
+                                        {
+                                            "name": "description",
+                                            "path": "sections.services.items.item_3.description",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Amco laboris nisi ut aliquip xea comod consequt duis aute irure dolor reprehenderit voluptate velit cillum dolore fugiat lore ipsum dolor sit amet consectetur adipisicing elit",
+                                            "translate": "Amco laboris nisi ut aliquip xea comod consequt duis aute irure dolor reprehenderit voluptate velit cillum dolore fugiat lore ipsum dolor sit amet consectetur adipisicing elit"
+                                        },
+                                        {
+                                            "name": "icon",
+                                            "note": "",
+                                            "path": "sections.services.items.item_3.icon",
+                                            "type": "tc_image",
+                                            "translatable": false,
+                                            "value": null
+                                        },
+                                        {
+                                            "name": "show_title",
+                                            "note": "",
+                                            "path": "sections.services.items.item_3.show_title",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "show_description",
+                                            "note": "",
+                                            "path": "sections.services.items.item_3.show_description",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "show_icon",
+                                            "note": "",
+                                            "path": "sections.services.items.item_3.show_icon",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                }
+                            ],
+                            "pushable": true,
+                            "default": {
+                                "name": "items[9]",
+                                "values": [
+                                    {
+                                        "name": "title",
+                                        "path": "sections.services.items.item_9.title",
+                                        "type": "tc_input",
+                                        "value": "Service Title",
+                                        "translatable": true
+                                    },
+                                    {
+                                        "name": "description",
+                                        "path": "sections.services.items.item_9.description",
+                                        "type": "tc_input",
+                                        "translatable": true,
+                                        "value": "Amco laboris nisi ut aliquip xea comod consequt duis aute irure dolor reprehenderit voluptate velit cillum dolore fugiat lore ipsum dolor sit amet consectetur adipisicing elit"
+                                    },
+                                    {
+                                        "name": "icon",
+                                        "note": "",
+                                        "path": "sections.services.items.item_9.icon",
+                                        "type": "tc_image",
+                                        "translatable": false,
+                                        "value": null
+                                    },
+                                    {
+                                        "name": "show_title",
+                                        "note": "",
+                                        "path": "sections.services.items.item_9.show_title",
+                                        "type": "tc_checkbox",
+                                        "translatable": false,
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "show_description",
+                                        "note": "",
+                                        "path": "sections.services.items.item_9.show_description",
+                                        "type": "tc_checkbox",
+                                        "translatable": false,
+                                        "value": true
+                                    },
+                                    {
+                                        "name": "show_icon",
+                                        "note": "",
+                                        "path": "sections.services.items.item_9.show_icon",
+                                        "type": "tc_checkbox",
+                                        "translatable": false,
+                                        "value": true
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "name": "booking",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "title",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "sections.booking.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Call Today For Booking Your Next Ride",
+                                            "translate": "Call Today For Booking Your Next Ride"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "phone_number",
+                                    "values": [
+                                        {
+                                            "name": "number",
+                                            "note": "",
+                                            "path": "sections.booking.number",
+                                            "type": "tc_input",
+                                            "translatable": false,
+                                            "value": "(800) 650 743"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "availability",
+                                    "values": [
+                                        {
+                                            "name": "availability",
+                                            "note": "",
+                                            "path": "sections.booking.availability",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Operators available 24/7",
+                                            "translate": "Operators available 24/7"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "show_title",
+                                    "values": [
+                                        {
+                                            "name": "show_title",
+                                            "note": "",
+                                            "path": "sections.booking.show_title",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "show_number",
+                                    "values": [
+                                        {
+                                            "name": "show_number",
+                                            "note": "",
+                                            "path": "sections.booking.show_number",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "show_availability",
+                                    "values": [
+                                        {
+                                            "name": "show_availability",
+                                            "note": "",
+                                            "path": "sections.booking.show_availability",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "icon",
+                                    "values": [
+                                        {
+                                            "name": "new value",
+                                            "note": "",
+                                            "path": "sections.booking.icon",
+                                            "type": "tc_image",
+                                            "translatable": false,
+                                            "value": null
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "show_icon",
+                                    "values": [
+                                        {
+                                            "name": "show_icon",
+                                            "note": "",
+                                            "path": "sections.booking.show_icon",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "show_book_section",
+                                    "values": [
+                                        {
+                                            "name": "new value",
+                                            "note": "",
+                                            "path": "sections.booking.show_section",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "background_img",
+                                    "values": [
+                                        {
+                                            "name": "background_img",
+                                            "note": "",
+                                            "path": "sections.booking.background_img",
+                                            "type": "tc_image",
+                                            "translatable": false,
+                                            "value": null
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "news",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "section_intro",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "sections.news.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "LATEST NEWS",
+                                            "translate": "LATEST NEWS"
+                                        },
+                                        {
+                                            "name": "under_title",
+                                            "note": "",
+                                            "path": "sections.news.under_title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Luxury SALMIA Rental Services",
+                                            "translate": "Luxury SALMIA Rental Services"
+                                        },
+                                        {
+                                            "name": "show_title",
+                                            "note": "",
+                                            "path": "sections.news.show_title",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "show_under_title",
+                                            "note": "",
+                                            "path": "sections.news.show_under_title",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "description",
+                                            "note": "",
+                                            "path": "sections.news.description",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Amco laboris nisi ut aliquip xea comod consequt duis aute irure dolor reprehenderit voluptate velit cillum dolore fugiat lore ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt",
+                                            "translate": "Amco laboris nisi ut aliquip xea comod consequt duis aute irure dolor reprehenderit voluptate velit cillum dolore fugiat lore ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt"
+                                        },
+                                        {
+                                            "name": "show_description",
+                                            "note": "",
+                                            "path": "sections.news.show_description",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "news_info",
+                                    "values": [
+                                        {
+                                            "name": "news",
+                                            "note": "",
+                                            "path": "sections.news.info",
+                                            "type": "tc_post",
+                                            "translatable": false,
+                                            "value": null
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "show_news_section",
+                                    "values": [
+                                        {
+                                            "name": "show_news_section",
+                                            "note": "",
+                                            "path": "sections.news.show_section",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "reviews",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "section_intro",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "sections.reviews.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "CUSTOMER REVIEWS",
+                                            "translate": "CUSTOMER REVIEWS"
+                                        },
+                                        {
+                                            "name": "under_title",
+                                            "note": "",
+                                            "path": "sections.reviews.under_title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Luxury SALMIA Rental Services",
+                                            "translate": "Luxury SALMIA Rental Services"
+                                        },
+                                        {
+                                            "name": "show_title",
+                                            "note": "",
+                                            "path": "sections.reviews.show_title",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "show_under_title",
+                                            "note": "",
+                                            "path": "sections.reviews.show_under_title",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "reviews",
+                                    "values": [
+                                        {
+                                            "name": "reviews",
+                                            "note": "",
+                                            "path": "sections.reviews.reviews",
+                                            "type": "tc_review",
+                                            "translatable": false,
+                                            "value": null
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "show_reviews_section",
+                                    "values": [
+                                        {
+                                            "name": "show_reviews_section",
+                                            "note": "",
+                                            "path": "sections.reviews.show_reviews_section",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "application",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "side_image",
+                                    "values": [
+                                        {
+                                            "name": "image",
+                                            "note": "",
+                                            "path": "sections.app.image",
+                                            "type": "tc_image",
+                                            "translatable": false,
+                                            "value": null
+                                        },
+                                        {
+                                            "name": "show_image",
+                                            "note": "",
+                                            "path": "sections.app.show_image",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "app_information",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "sections.app.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "DOWNLOAD OUR APP",
+                                            "translate": "DOWNLOAD OUR APP"
+                                        },
+                                        {
+                                            "name": "description",
+                                            "note": "",
+                                            "path": "sections.app.description",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Integer tortor bibendum est faucibus gravida aliquam nulla lectus lacinia eget lorem acdua eros pharetral interdum quisque convallis nula dpsum val mualiq amet consectetur adipisicing sed eiusmod tem ipsum pory.",
+                                            "translate": "Integer tortor bibendum est faucibus gravida aliquam nulla lectus lacinia eget lorem acdua eros pharetral interdum quisque convallis nula dpsum val mualiq amet consectetur adipisicing sed eiusmod tem ipsum pory."
+                                        },
+                                        {
+                                            "name": "top_title",
+                                            "note": "",
+                                            "path": "sections.app.top_title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Faster, easier access to car rental services",
+                                            "translate": "Faster, easier access to car rental services"
+                                        },
+                                        {
+                                            "name": "show_title",
+                                            "note": "",
+                                            "path": "sections.app.show_title",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "show_description",
+                                            "note": "",
+                                            "path": "sections.app.show_description",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "show_top_title",
+                                            "note": "",
+                                            "path": "sections.app.show_top",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "store_icon",
+                                            "note": "",
+                                            "path": "sections.app.store_icon",
+                                            "type": "tc_image",
+                                            "translatable": false,
+                                            "value": null
+                                        },
+                                        {
+                                            "name": "apple_icon",
+                                            "note": "",
+                                            "path": "sections.app.apple_icon",
+                                            "type": "tc_image",
+                                            "translatable": false,
+                                            "value": null
+                                        },
+                                        {
+                                            "name": "show_play_store",
+                                            "note": "",
+                                            "path": "sections.app.show_play_store",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "show_apple_store",
+                                            "note": "",
+                                            "path": "sections.app.show_apple_store",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "app_play_store_link",
+                                            "note": "",
+                                            "path": "sections.app.app_play_store_link",
+                                            "type": "tc_input",
+                                            "translatable": false,
+                                            "value": "https://play.google.com/store/apps"
+                                        },
+                                        {
+                                            "name": "app_apple_store_link",
+                                            "note": "",
+                                            "path": "sections.app.app_apple_store_link",
+                                            "type": "tc_input",
+                                            "translatable": false,
+                                            "value": "https://www.apple.com/app-store/your value"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "show_section",
+                                    "values": [
+                                        {
+                                            "name": "show_section",
+                                            "note": "",
+                                            "path": "sections.app.show_section",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "footer",
+                    "sections": [
+                        {
+                            "name": "section_intro",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "company_name",
+                                    "values": [
+                                        {
+                                            "name": "name",
+                                            "note": "",
+                                            "path": "sections.footer.company_name",
+                                            "type": "tc_input",
+                                            "translatable": false,
+                                            "value": "SALMIA"
+                                        },
+                                        {
+                                            "name": "show_name",
+                                            "note": "",
+                                            "path": "sections.footer.show_name",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "logo_company",
+                                    "values": [
+                                        {
+                                            "name": "logo",
+                                            "note": "",
+                                            "path": "sections.footer.logo",
+                                            "type": "tc_image",
+                                            "translatable": false,
+                                            "value": null
+                                        },
+                                        {
+                                            "name": "show_logo",
+                                            "note": "",
+                                            "path": "sections.footer.show_logo",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "copyright",
+                                    "values": [
+                                        {
+                                            "name": "copyright",
+                                            "note": "",
+                                            "path": "sections.footer.copyright",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Copyright © 2024 by STOREINO. All Rights Reserved.",
+                                            "translate": "Copyright © 2024 by STOREINO. All Rights Reserved."
+                                        },
+                                        {
+                                            "name": "show_copyright",
+                                            "note": "",
+                                            "path": "sections.footer.show_copyright",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "useful_links",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "title",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "sections.footer.useful_links.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "USEFUL LINKS",
+                                            "translate": "USEFUL LINKS"
+                                        },
+                                        {
+                                            "name": "show_title",
+                                            "note": "",
+                                            "path": "sections.footer.useful_links.show_title",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "links",
+                                    "values": [
+                                        {
+                                            "name": "links",
+                                            "note": "",
+                                            "path": "sections.footer.useful_links.links",
+                                            "type": "tc_menu",
+                                            "translatable": false,
+                                            "value": []
+                                        },
+                                        {
+                                            "name": "show_links",
+                                            "note": "",
+                                            "path": "sections.footer.useful_links.show_links",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "show_section",
+                                    "values": [
+                                        {
+                                            "name": "new value",
+                                            "note": "",
+                                            "path": "sections.footer.useful_links.show_section",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "our_terms",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "title",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "sections.footer.terms.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "OUR TERMS",
+                                            "translate": "OUR TERMS"
+                                        },
+                                        {
+                                            "name": "show_title",
+                                            "note": "",
+                                            "path": "sections.footer.terms.show_title",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "links",
+                                    "values": [
+                                        {
+                                            "name": "links",
+                                            "note": "",
+                                            "path": "sections.footer.terms.links",
+                                            "type": "tc_menu",
+                                            "translatable": false,
+                                            "value": []
+                                        },
+                                        {
+                                            "name": "show_links",
+                                            "note": "",
+                                            "path": "sections.footer.terms.show_links",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "show_terms",
+                                    "values": [
+                                        {
+                                            "name": "show_terms",
+                                            "note": "",
+                                            "path": "sections.footer.terms.show_terms",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "showroom",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "title",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "sections.footer.showroom.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "SHOWROOM",
+                                            "translate": "SHOWROOM"
+                                        },
+                                        {
+                                            "name": "show_title",
+                                            "note": "",
+                                            "path": "sections.footer.showroom.show_title",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "adresse",
+                                    "values": [
+                                        {
+                                            "name": "adresse",
+                                            "note": "",
+                                            "path": "sections.footer.showroom.adresse",
+                                            "type": "tc_input",
+                                            "translatable": false,
+                                            "value": "USA, Auto, King St. 665087"
+                                        },
+                                        {
+                                            "name": "show_adresse",
+                                            "note": "",
+                                            "path": "sections.footer.showroom.show_adresse",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "phone_number",
+                                    "values": [
+                                        {
+                                            "name": "phone_number",
+                                            "note": "",
+                                            "path": "sections.footer.showroom.number",
+                                            "type": "tc_input",
+                                            "translatable": false,
+                                            "value": "+7 234 949-58-83"
+                                        },
+                                        {
+                                            "name": "show_number",
+                                            "note": "",
+                                            "path": "sections.footer.showroom.show_number",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "e-mail",
+                                    "values": [
+                                        {
+                                            "name": "e-mail",
+                                            "note": "",
+                                            "path": "sections.footer.showroom.email",
+                                            "type": "tc_input",
+                                            "translatable": false,
+                                            "value": "info@example.com"
+                                        },
+                                        {
+                                            "name": "show_e-mail",
+                                            "note": "",
+                                            "path": "sections.footer.showroom.show_email",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "show_showroom",
+                                    "values": [
+                                        {
+                                            "name": "show_showroom",
+                                            "note": "",
+                                            "path": "sections.footer.showroom.show_section",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                }
+                                
+                            ]
+                        },
+                        {
+                            "name": "show_footer",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "show_footer",
+                                    "values": [
+                                        {
+                                            "name": "show_footer",
+                                            "note": "",
+                                            "path": "sections.footer.show_footer_section",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "copyright",
+                    "sections": [
+                        {
+                            "name": "copyright_info",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "copyright_info",
+                                    "values": [
+                                        {
+                                            "name": "copyright",
+                                            "note": "",
+                                            "path": "sections.copyright.info",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Copyright © 2024 by STOREINO. All Rights Reserved.",
+                                            "translate": "Copyright © 2024 by STOREINO. All Rights Reserved."
+                                        },
+                                        {
+                                            "name": "show_copyright",
+                                            "note": "",
+                                            "path": "sections.copyright.show_copyright",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "show_copyright_section",
+                                    "values": [
+                                        {
+                                            "name": "show_section",
+                                            "note": "",
+                                            "path": "sections.copyright.show_section",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "news_page",
+                    "sections": [
+                        {
+                            "name": "news",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "search_for_news",
+                                    "values": [
+                                        {
+                                            "name": "search_for_news",
+                                            "note": "",
+                                            "path": "sections.news_pge.search_for_news",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "contact_page",
+                    "sections": [
+                        {
+                            "name": "section_intro",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "title",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "sections.contact.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Contact Us",
+                                            "translate": "Contact Us"
+                                        },
+                                        {
+                                            "name": "show_title",
+                                            "note": "",
+                                            "path": "sections.contact.show_title",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "under_title",
+                                            "note": "",
+                                            "path": "sections.contact.under_title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "GET IN TOUCH",
+                                            "translate": "GET IN TOUCH"
+                                        },
+                                        {
+                                            "name": "show_under_title",
+                                            "note": "",
+                                            "path": "sections.contact.show_under_title",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "map_adresse",
+                                    "values": [
+                                        {
+                                            "name": "show_map_adresse",
+                                            "note": "",
+                                            "path": "sections.maps.show_adresse",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "globales",
+                    "sections": [
+                        {
+                            "name": "alerts",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "proceed_to_checkout",
+                                    "values": [
+                                        {
+                                            "name": "proceed_to_checkout",
+                                            "note": "",
+                                            "path": "sections.alerts.proceed_to_checkout",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "PROCEED_TO_CHECKOUT",
+                                            "translate": "PROCEED_TO_CHECKOUT"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "style_theme",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "primary_color",
+                                    "values": [
+                                        {
+                                            "name": "primary_color",
+                                            "note": "",
+                                            "path": "style.primary_color",
+                                            "type": "tc_color",
+                                            "translatable": false,
+                                            "value": "#de1b1b"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "second_color",
+                                    "values": [
+                                        {
+                                            "name": "second_color",
+                                            "note": "",
+                                            "path": "style.second_color",
+                                            "type": "tc_color",
+                                            "translatable": false,
+                                            "value": "#f5f5f5"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "blog_page",
+                    "sections": [
+                        {
+                            "name": "share_buttons",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "share_buttons_title",
+                                    "values": [
+                                        {
+                                            "name": "title",
+                                            "note": "",
+                                            "path": "sections.blog.share_buttons.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Share This Pagea",
+                                            "translate": "Share This Pagea"
+                                        },
+                                        {
+                                            "name": "show_title",
+                                            "note": "",
+                                            "path": "sections.blog.share_buttons.show_title",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "show_share_buttons",
+                                    "values": [
+                                        {
+                                            "name": "show_share_buttons",
+                                            "note": "",
+                                            "path": "sections.blog.share_buttons.show_share_buttons",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "cars_page",
+                    "sections": [
+                        {
+                            "name": "cars_products",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "sorts",
+                                    "values": [
+                                        {
+                                            "name": "expensice_one",
+                                            "note": "",
+                                            "path": "sections.cars.sorts.price_asc",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Expensive One",
+                                            "translate": "Expensive One"
+                                        },
+                                        {
+                                            "name": "cheap_one",
+                                            "note": "",
+                                            "path": "sections.cars.sorts.price_desc",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Cheap One ",
+                                            "translate": "Cheap One "
+                                        },
+                                        {
+                                            "name": "name_a_z",
+                                            "note": "",
+                                            "path": "sections.cars.sorts.name_asc ",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Name A-Z",
+                                            "translate": "Name A-Z"
+                                        },
+                                        {
+                                            "name": "name_z_a",
+                                            "note": "",
+                                            "path": "sections.cars.sorts.name_desc",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Name Z-A",
+                                            "translate": "Name Z-A"
+                                        },
+                                        {
+                                            "name": "first_added",
+                                            "note": "",
+                                            "path": "sections.cars.sorts.newest",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Fisrt Added",
+                                            "translate": "Fisrt Added"
+                                        },
+                                        {
+                                            "name": "last_added",
+                                            "note": "",
+                                            "path": "sections.cars.sorts.oldest",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Last Added",
+                                            "translate": "Last Added"
+                                        },
+                                        {
+                                            "name": "sort_title",
+                                            "note": "",
+                                            "path": "sections.cars.sorts.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "SORT BY",
+                                            "translate": "SORT BY"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "no_products_text",
+                                    "values": [
+                                        {
+                                            "name": "no_products",
+                                            "note": "",
+                                            "path": "sections.cars.no_products_text",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "NO PRODUCTS FOUNDED",
+                                            "translate": "NO PRODUCTS FOUNDED"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "reset_filter",
+                                    "values": [
+                                        {
+                                            "name": "reset_filter_txt",
+                                            "note": "",
+                                            "path": "sections.cars.reset_filter_text",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "RESET FILTER",
+                                            "translate": "RESET FILTER"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "booking_time",
+                                    "values": [
+                                        {
+                                            "name": "booking_time_text",
+                                            "note": "",
+                                            "path": "sections.cars.booking_time_text",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "BOOKING TIME",
+                                            "translate": "BOOKING TIME"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "pickup_date",
+                                    "values": [
+                                        {
+                                            "name": "pickup_date_text",
+                                            "note": "",
+                                            "path": "sections.cars.pickup_date_text",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Drop-off Date",
+                                            "translate": "Drop-off Date"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "dropoff_date",
+                                    "values": [
+                                        {
+                                            "name": "new value",
+                                            "note": "",
+                                            "path": "sections.cars.pickup_date_text",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Drop-off Date",
+                                            "translate": "Drop-off Date"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "pickup_location",
+                                    "values": [
+                                        {
+                                            "name": "pickup_location_text",
+                                            "note": "",
+                                            "path": "sections.cars.pickup_location_text",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "PICK-UP LOCATION",
+                                            "translate": "PICK-UP LOCATION"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "price_range",
+                                    "values": [
+                                        {
+                                            "name": "price_range_text",
+                                            "note": "",
+                                            "path": "sections.cars.price_range_text",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "PRICE RANGE",
+                                            "translate": "PRICE RANGE"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "car_brand",
+                                    "values": [
+                                        {
+                                            "name": "car_brand_text",
+                                            "note": "",
+                                            "path": "sections.cars.car_brand_text",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "CAR BRAND",
+                                            "translate": "CAR BRAND"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "product_page",
+                    "sections": [
+                        {
+                            "name": "product",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "booking_this_car_button",
+                                    "values": [
+                                        {
+                                            "name": "text_button",
+                                            "note": "",
+                                            "path": "sections.product.booking_this_car.text",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "BOOKING THIS CAR",
+                                            "translate": "BOOKING THIS CAR"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "pickup_date",
+                                    "values": [
+                                        {
+                                            "name": "pickup_date_text",
+                                            "note": "",
+                                            "path": "sections.product.pickup_date.text",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "PICK UP DATE",
+                                            "translate": "PICK UP DATE"
+                                        },
+                                        {
+                                            "name": "pickup_date_active",
+                                            "note": "",
+                                            "path": "sections.product.pickup_date.active",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "dropoff_date",
+                                    "values": [
+                                        {
+                                            "name": "dropoff_date_text",
+                                            "note": "",
+                                            "path": "sections.product.dropoff_date.text",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "DROP OFF DATE",
+                                            "translate": "DROP OFF DATE"
+                                        },
+                                        {
+                                            "name": "dropoff_date_active",
+                                            "note": "",
+                                            "path": "sections.product.dropoff_date.active",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "pickup_location",
+                                    "values": [
+                                        {
+                                            "name": "pickup_location",
+                                            "note": "",
+                                            "path": "sections.product.pickup_location",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "PICK UP LOCATION",
+                                            "translate": "PICK UP LOCATION"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "dropoff_loction",
+                                    "values": [
+                                        {
+                                            "name": "dropoff_loction",
+                                            "note": "",
+                                            "path": "sections.product.dropoff_loction",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "DROP OFF LOCATION",
+                                            "translate": "DROP OFF LOCATION"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "extra_resources",
+                                    "values": [
+                                        {
+                                            "name": "extra_resources_text",
+                                            "note": "",
+                                            "path": "sections.product.extra_resources.text",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "EXTRA RESOURCES",
+                                            "translate": "EXTRA RESOURCES"
+                                        },
+                                        {
+                                            "name": "extra_resources_active",
+                                            "note": "",
+                                            "path": "sections.product.extra_resources.active",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "car_description",
+                                    "values": [
+                                        {
+                                            "name": "car_description_text",
+                                            "note": "",
+                                            "path": "sections.product.car_description.text",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "CAR DESCRIPTION",
+                                            "translate": "CAR DESCRIPTION"
+                                        },
+                                        {
+                                            "name": "car_description_active",
+                                            "note": "",
+                                            "path": "sections.product.car_description.active",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "equipement",
+                                    "values": [
+                                        {
+                                            "name": "equipement_text",
+                                            "note": "",
+                                            "path": "sections.product.equipement.text",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "EQUIPMENT",
+                                            "translate": "EQUIPMENT"
+                                        },
+                                        {
+                                            "name": "equipement_active",
+                                            "note": "",
+                                            "path": "sections.product.equipement.active",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "specifications",
+                                    "values": [
+                                        {
+                                            "name": "specifications_text",
+                                            "note": "",
+                                            "path": "sections.product.specifications.text",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "SPECIFICATIONS",
+                                            "translate": "SPECIFICATIONS"
+                                        },
+                                        {
+                                            "name": "specifications_active",
+                                            "note": "",
+                                            "path": "sections.product.specifications.active",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        },
+                                        {
+                                            "name": "auto_maker",
+                                            "note": "",
+                                            "path": "sections.product.auto_maker",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "AUTO MAKER :",
+                                            "translate": "AUTO MAKER :"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "reviews",
+                                    "values": [
+                                        {
+                                            "name": "reviews_text",
+                                            "note": "",
+                                            "path": "sections.product.reviews.text",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "REVIEWS",
+                                            "translate": "REVIEWS"
+                                        },
+                                        {
+                                            "name": "reviews_active",
+                                            "note": "",
+                                            "path": "sections.product.reviews.active",
+                                            "type": "tc_checkbox",
+                                            "translatable": false,
+                                            "value": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "total",
+                                    "values": [
+                                        {
+                                            "name": "total_text",
+                                            "note": "",
+                                            "path": "sections.product.total_text",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "TOTAL",
+                                            "translate": "TOTAL"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "rent_it",
+                                    "values": [
+                                        {
+                                            "name": "rent_it",
+                                            "note": "",
+                                            "path": "sections.product.rent_it",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "RENT IT",
+                                            "translate": "RENT IT"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "thanks",
+                    "sections": [
+                        {
+                            "name": "thanks",
+                            "icon": "select_all",
+                            "blocks": [
+                                {
+                                    "name": "thanks_info",
+                                    "values": [
+                                        {
+                                            "name": "thanks_title",
+                                            "note": "",
+                                            "path": "sections.thanks.title",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Thanks",
+                                            "translate": "Thanks"
+                                        },
+                                        {
+                                            "name": "thanks_description",
+                                            "note": "",
+                                            "path": "sections.thanks.description",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Thank you for your order",
+                                            "translate": "Thank you for your order"
+                                        },
+                                        {
+                                            "name": "back_to_cars_text",
+                                            "note": "",
+                                            "path": "sections.thanks.back_to_cars_text",
+                                            "type": "tc_input",
+                                            "translatable": true,
+                                            "value": "Back To Explore Cars",
+                                            "translate": "Back To Explore Cars"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "currentLang": null
+        },
+        "current": {
+            "translates": [
+                {
+                    "language": "AR",
+                    "properties": [
+                        {
+                            "name": "sections.banner.title",
+                            "value": "احجز رحلتك الفاخرة"
+                        },
+                        {
+                            "name": "sections.banner.description",
+                            "value": "استمتع بالفخامة مع أسطولنا المختار بعناية من السيارات الفاخرة، متاحة بأسعار جذابة."
+                        },
+                        {
+                            "name": "sections.form.pickup_date",
+                            "value": "تاريخ الاستلام"
+                        },
+                        {
+                            "name": "sections.form.dropoff_date",
+                            "value": "تاريخ التسليم"
+                        },
+                        {
+                            "name": "sections.form.brands_title",
+                            "value": "علامات السيارات"
+                        },
+                        {
+                            "name": "sections.form.find",
+                            "value": "ابحث عنها الآن"
+                        },
+                        {
+                            "name": "sections.form.pickup_adresse",
+                            "value": "موقع الاستلام"
+                        },
+                        {
+                            "name": "sections.benefits.title",
+                            "value": "مزايانا"
+                        },
+                        {
+                            "name": "sections.benefits.description",
+                            "value": "خدمات تأجير السيارات الفاخرة SALMIA"
+                        },
+                        {
+                            "name": "sections.benefit_1.title",
+                            "value": "عملاؤنا راضون دائمًا بنسبة 100٪"
+                        },
+                        {
+                            "name": "sections.benefit_2.title",
+                            "value": "نقدم حجوزات أسهل وأسرع"
+                        },
+                        {
+                            "name": "sections.benefit_3.title",
+                            "value": "اختيارك لأي موقع استلام"
+                        },
+                        {
+                            "name": "sections.guide.title",
+                            "value": "كيف تعمل إيجارات SALMIA"
+                        },
+                        {
+                            "name": "sections.fleets.title",
+                            "value": "أساطيل تأجير السيارات"
+                        },
+                        {
+                            "name": "sections.fleets.under_title",
+                            "value": "خدمات تأجير السيارات الفاخرة SALMIA"
+                        },
+                        {
+                            "name": "sections.services.title",
+                            "value": "مع مجموعة واسعة من المركبات SALMIA خدمة تأجير السيارات"
+                        },
+                        {
+                            "name": "sections.service_1.title",
+                            "value": "أسعار سهلة وتنافسية"
+                        },
+                        {
+                            "name": "sections.service_2.title",
+                            "value": "مساعدة الأعطال"
+                        },
+                        {
+                            "name": "sections.service_3.title",
+                            "value": "خدمة تأجير سيارات موثوقة"
+                        },
+                        {
+                            "name": "sections.service_4.title",
+                            "value": "دعم العملاء المجاني 24/7"
+                        },
+                        {
+                            "name": "sections.booking.title",
+                            "value": "اتصل اليوم لحجز رحلتك القادمة"
+                        },
+                        {
+                            "name": "sections.booking.availability",
+                            "value": "المشغلون متاحون على مدار 24/7"
+                        },
+                        {
+                            "name": "sections.news.title",
+                            "value": "أحدث الأخبار"
+                        },
+                        {
+                            "name": "sections.news.under_title",
+                            "value": "خدمات تأجير السيارات الفاخرة SALMIA"
+                        },
+                        {
+                            "name": "sections.reviews.title",
+                            "value": "آراء العملاء"
+                        },
+                        {
+                            "name": "sections.reviews.under_title",
+                            "value": "خدمات تأجير السيارات الفاخرة SALMIA"
+                        },
+                        {
+                            "name": "sections.app.title",
+                            "value": "حمل التطبيق الخاص بنا"
+                        },
+                        {
+                            "name": "sections.app.top_title",
+                            "value": "وصول أسرع وأسهل إلى خدمات تأجير السيارات"
+                        },
+                        {
+                            "name": "sections.footer.copyright",
+                            "value": "حقوق النشر ©  __YEAR__  Storeino. جميع الحقوق محفوظة من طرف "
+                        },
+                        {
+                            "name": "sections.footer.useful_links.title",
+                            "value": "روابط مفيدة"
+                        },
+                        {
+                            "name": "sections.footer.terms.title",
+                            "value": "شروطنا"
+                        },
+                        {
+                            "name": "sections.footer.showroom.title",
+                            "value": "معرض"
+                        },
+                        {
+                            "name": "sections.copyright.info",
+                            "value": "حقوق النشر ©  __YEAR__  Storeino. جميع الحقوق محفوظة من طرف "
+                        },
+                        {
+                            "name": "sections.contact.title",
+                            "value": "اتصل بنا"
+                        },
+                        {
+                            "name": "sections.contact.under_title",
+                            "value": "ابقى على اتصال"
+                        },
+                        {
+                            "name": "sections.alerts.proceed_to_checkout",
+                            "value": "الانتقال إلى الدفع"
+                        },
+                        {
+                            "name": "sections.blog.share_buttons.title",
+                            "value": "شارك هذه الصفحة"
+                        },
+                        {
+                            "name": "sections.cars.sorts.price_asc",
+                            "value": "الغالي"
+                        },
+                        {
+                            "name": "sections.cars.sorts.price_desc",
+                            "value": "الرخيص"
+                        },
+                        {
+                            "name": "sections.cars.sorts.name_asc ",
+                            "value": "الاسم من أ-ي"
+                        },
+                        {
+                            "name": "sections.cars.sorts.name_desc",
+                            "value": "الاسم من ي-أ"
+                        },
+                        {
+                            "name": "sections.cars.sorts.newest",
+                            "value": "الأول المضاف"
+                        },
+                        {
+                            "name": "sections.cars.sorts.oldest",
+                            "value": "آخر المضاف"
+                        },
+                        {
+                            "name": "sections.cars.sorts.title",
+                            "value": "فرز حسب"
+                        },
+                        {
+                            "name": "sections.cars.no_products_text",
+                            "value": "لا توجد منتجات تم العثور عليها"
+                        },
+                        {
+                            "name": "sections.cars.reset_filter_text",
+                            "value": "إعادة تعيين الفلتر"
+                        },
+                        {
+                            "name": "sections.cars.booking_time_text",
+                            "value": "وقت الحجز"
+                        },
+                        {
+                            "name": "sections.cars.pickup_date_text",
+                            "value": " تاريخ التسليم"
+                        },
+                        {
+                            "name": "sections.cars.pickup_date_text",
+                            "value": " تاريخ التسليم"
+                        },
+                        {
+                            "name": "sections.cars.pickup_location_text",
+                            "value": "مكان الاستلام"
+                        },
+                        {
+                            "name": "sections.cars.price_range_text",
+                            "value": "نطاق الأسعار"
+                        },
+                        {
+                            "name": "sections.cars.car_brand_text",
+                            "value": "علامة السيارة"
+                        },
+                        {
+                            "name": "sections.product.booking_this_car.text",
+                            "value": "حجز هذه السيارة"
+                        },
+                        {
+                            "name": "sections.product.pickup_date.text",
+                            "value": "تاريخ الاستلام"
+                        },
+                        {
+                            "name": "sections.product.dropoff_date.text",
+                            "value": "تاريخ التسليم"
+                        },
+                        {
+                            "name": "sections.product.pickup_location",
+                            "value": "موقع الاستلام"
+                        },
+                        {
+                            "name": "sections.product.dropoff_loction",
+                            "value": " موقع التسليم"
+                        },
+                        {
+                            "name": "sections.product.extra_resources.text",
+                            "value": "موارد إضافية"
+                        },
+                        {
+                            "name": "sections.product.car_description.text",
+                            "value": "وصف السيارة"
+                        },
+                        {
+                            "name": "sections.product.equipement.text",
+                            "value": "تجهيزات"
+                        },
+                        {
+                            "name": "sections.product.specifications.text",
+                            "value": "المواصفات"
+                        },
+                        {
+                            "name": "sections.product.auto_maker",
+                            "value": "صانع السيارات"
+                        },
+                        {
+                            "name": "sections.product.engine_volume",
+                            "value": "حجم المحرك :"
+                        },
+                        {
+                            "name": "sections.product.year",
+                            "value": "سنة الإنتاج"
+                        },
+                        {
+                            "name": "sections.product.fuel",
+                            "value": "نوع الوقود"
+                        },
+                        {
+                            "name": "sections.product.transmission",
+                            "value": "ناقل الحركة"
+                        },
+                        {
+                            "name": "sections.product.reviews.text",
+                            "value": "تقييمات"
+                        },
+                        {
+                            "name": "sections.product.total_text",
+                            "value": "الإجمالي"
+                        },
+                        {
+                            "name": "sections.product.rent_it",
+                            "value": "استئجرها"
+                        },
+                        {
+                            "name": "sections.thanks.title",
+                            "value": "شكرا"
+                        },
+                        {
+                            "name": "sections.thanks.description",
+                            "value": "شكرًا لطلبك"
+                        },
+                        {
+                            "name": "sections.thanks.back_to_cars_text",
+                            "value": "العودة لاستكشاف السيارات"
+                        }
+                    ]
+                },
+                {
+                    "language": "FR",
+                    "properties": [
+                        {
+                            "name": "sections.banner.title",
+                            "value": "Réservez Votre Trajet De Luxe"
+                        },
+                        {
+                            "name": "sections.banner.description",
+                            "value": "Offrez-vous le luxe avec notre flotte de voitures haut de gamme soigneusement sélectionnées, disponibles à des tarifs attractifs."
+                        },
+                        {
+                            "name": "sections.form.pickup_date",
+                            "value": "DATE DE PRISE EN CHARGE"
+                        },
+                        {
+                            "name": "sections.form.dropoff_date",
+                            "value": "DATE DE RESTITUTION"
+                        },
+                        {
+                            "name": "sections.form.brands_title",
+                            "value": "MARQUES DE VOITURES"
+                        },
+                        {
+                            "name": "sections.form.find",
+                            "value": "TROUVEZ-LA MAINTENANT"
+                        },
+                        {
+                            "name": "sections.form.pickup_adresse",
+                            "value": "LIEU DE PRISE EN CHARGE"
+                        },
+                        {
+                            "name": "sections.benefits.title",
+                            "value": "NOS AVANTAGES"
+                        },
+                        {
+                            "name": "sections.benefits.description",
+                            "value": "Services de location de voitures de luxe SALMIA"
+                        },
+                        {
+                            "name": "sections.benefit_1.title",
+                            "value": "Nos clients sont toujours 100% satisfaits"
+                        },
+                        {
+                            "name": "sections.benefit_2.title",
+                            "value": "Nous fournissons des réservations plus faciles et plus rapides"
+                        },
+                        {
+                            "name": "sections.benefit_3.title",
+                            "value": "Votre choix de n'importe quel lieu de prise en charge"
+                        },
+                        {
+                            "name": "sections.guide.title",
+                            "value": "COMMENT FONCTIONNE LA LOCATION SALMIA"
+                        },
+                        {
+                            "name": "sections.fleets.title",
+                            "value": "NOS FLOTTES DE LOCATION"
+                        },
+                        {
+                            "name": "sections.fleets.under_title",
+                            "value": "Services de location de voitures de luxe SALMIA"
+                        },
+                        {
+                            "name": "sections.services.title",
+                            "value": "Service de location de voitures SALMIA avec une large gamme de véhicules"
+                        },
+                        {
+                            "name": "sections.service_1.title",
+                            "value": "Prix faciles et compétitifs"
+                        },
+                        {
+                            "name": "sections.service_2.title",
+                            "value": "Assistance dépannage"
+                        },
+                        {
+                            "name": "sections.service_3.title",
+                            "value": "Service de location de confiance"
+                        },
+                        {
+                            "name": "sections.service_4.title",
+                            "value": "Support client gratuit 24h/24 et 7j/7"
+                        },
+                        {
+                            "name": "sections.booking.title",
+                            "value": "Appelez dès aujourd'hui pour réserver votre prochain trajet"
+                        },
+                        {
+                            "name": "sections.booking.availability",
+                            "value": "Opérateurs disponibles 24/7"
+                        },
+                        {
+                            "name": "sections.news.title",
+                            "value": "DERNIÈRES NOUVELLES"
+                        },
+                        {
+                            "name": "sections.news.under_title",
+                            "value": "Services de location de voitures de luxe SALMIA"
+                        },
+                        {
+                            "name": "sections.reviews.title",
+                            "value": "AVIS DES CLIENTS"
+                        },
+                        {
+                            "name": "sections.reviews.under_title",
+                            "value": "Services de location de voitures de luxe SALMIA"
+                        },
+                        {
+                            "name": "sections.app.title",
+                            "value": "TÉLÉCHARGEZ NOTRE APP"
+                        },
+                        {
+                            "name": "sections.app.top_title",
+                            "value": "Accès plus rapide et plus facile aux services de location de voitures"
+                        },
+                        {
+                            "name": "sections.footer.copyright",
+                            "value": "Droits d'auteur ©  __YEAR__ Storeino. Tous droits réservés d'aprés "
+                        },
+                        {
+                            "name": "sections.footer.useful_links.title",
+                            "value": "LIENS UTILES"
+                        },
+                        {
+                            "name": "sections.footer.terms.title",
+                            "value": "NOS CONDITIONS GÉNÉRALES"
+                        },
+                        {
+                            "name": "sections.footer.showroom.title",
+                            "value": "SALLE D'EXPOSITION"
+                        },
+                        {
+                            "name": "sections.copyright.info",
+                            "value": "Droits d'auteur ©  __YEAR__ Storeino. Tous droits réservés d'aprés "
+                        },
+                        {
+                            "name": "sections.contact.title",
+                            "value": "Contactez-nous"
+                        },
+                        {
+                            "name": "sections.contact.under_title",
+                            "value": "ENTREZ EN CONTACT "
+                        },
+                        {
+                            "name": "sections.alerts.proceed_to_checkout",
+                            "value": "PASSER AU PAIEMENT"
+                        },
+                        {
+                            "name": "sections.blog.share_buttons.title",
+                            "value": " Partagez cette page"
+                        },
+                        {
+                            "name": "sections.cars.sorts.price_asc",
+                            "value": "Le Cher"
+                        },
+                        {
+                            "name": "sections.cars.sorts.price_desc",
+                            "value": "le Bon Marché"
+                        },
+                        {
+                            "name": "sections.cars.sorts.name_asc ",
+                            "value": "Nom de A à Z"
+                        },
+                        {
+                            "name": "sections.cars.sorts.name_desc",
+                            "value": "Nom de Z à A"
+                        },
+                        {
+                            "name": "sections.cars.sorts.newest",
+                            "value": "Premier ajouté"
+                        },
+                        {
+                            "name": "sections.cars.sorts.oldest",
+                            "value": "Dernier ajouté"
+                        },
+                        {
+                            "name": "sections.cars.sorts.title",
+                            "value": "TRIER PAR"
+                        },
+                        {
+                            "name": "sections.cars.no_products_text",
+                            "value": "AUCUN PRODUIT TROUVÉ"
+                        },
+                        {
+                            "name": "sections.cars.reset_filter_text",
+                            "value": "RÉINITIALISER LE FILTRE"
+                        },
+                        {
+                            "name": "sections.cars.booking_time_text",
+                            "value": "TEMPS DE RÉSERVATION"
+                        },
+                        {
+                            "name": "sections.cars.pickup_date_text",
+                            "value": "Date de restitution"
+                        },
+                        {
+                            "name": "sections.cars.pickup_date_text",
+                            "value": "Date de restitution"
+                        },
+                        {
+                            "name": "sections.cars.pickup_location_text",
+                            "value": " LIEU DE PRISE EN CHARGE"
+                        },
+                        {
+                            "name": "sections.cars.price_range_text",
+                            "value": "GAMME DE PRIX"
+                        },
+                        {
+                            "name": "sections.cars.car_brand_text",
+                            "value": "MARQUE DE VOITURE"
+                        },
+                        {
+                            "name": "sections.product.booking_this_car.text",
+                            "value": "RÉSERVATION DE CETTE VOITURE"
+                        },
+                        {
+                            "name": "sections.product.pickup_date.text",
+                            "value": "DATE DE PRISE EN CHARGE"
+                        },
+                        {
+                            "name": "sections.product.dropoff_date.text",
+                            "value": "DATE DE RESTITUTION"
+                        },
+                        {
+                            "name": "sections.product.pickup_location",
+                            "value": "LIEU DE PRISE EN CHARGE"
+                        },
+                        {
+                            "name": "sections.product.dropoff_loction",
+                            "value": "LIEU DE RESTITUTION"
+                        },
+                        {
+                            "name": "sections.product.extra_resources.text",
+                            "value": "RESSOURCES SUPPLÉMENTAIRES"
+                        },
+                        {
+                            "name": "sections.product.car_description.text",
+                            "value": " DESCRIPTION DE LA VOITURE"
+                        },
+                        {
+                            "name": "sections.product.equipement.text",
+                            "value": " ÉQUIPEMENT"
+                        },
+                        {
+                            "name": "sections.product.specifications.text",
+                            "value": "SPÉCIFICATIONS"
+                        },
+                        {
+                            "name": "sections.product.auto_maker",
+                            "value": "CONSTRUCTEUR AUTOMOBILE"
+                        },
+                        {
+                            "name": "sections.product.engine_volume",
+                            "value": "VOLUME DU MOTEUR :"
+                        },
+                        {
+                            "name": "sections.product.year",
+                            "value": "ANNÉE DE PRODUCTION"
+                        },
+                        {
+                            "name": "sections.product.fuel",
+                            "value": "TYPE DE CARBURANT :"
+                        },
+                        {
+                            "name": "sections.product.transmission",
+                            "value": "TRANSMISSION"
+                        },
+                        {
+                            "name": "sections.product.reviews.text",
+                            "value": "AVIS"
+                        },
+                        {
+                            "name": "sections.product.total_text",
+                            "value": "TOTAL"
+                        },
+                        {
+                            "name": "sections.product.rent_it",
+                            "value": "LOUEZ-LA"
+                        },
+                        {
+                            "name": "sections.thanks.title",
+                            "value": "Merci"
+                        },
+                        {
+                            "name": "sections.thanks.description",
+                            "value": " Merci pour votre commande"
+                        },
+                        {
+                            "name": "sections.thanks.back_to_cars_text",
+                            "value": "Retourner à la découverte des voitures"
+                        }
+                    ]
+                }
+            ],
+            "sections": {
+                "navbar": {
+                    "menu": null,
+                    "active_menu": true,
+                    "language_icon": null,
+                    "currency_icon": null,
+                    "logo": null,
+                    "active_logo": true,
+                    "name": "SALMIA",
+                    "active_name": true
+                },
+                "banner": {
+                    "title": "Book Your Luxury Ride",
+                    "description": " Indulge in luxury with our carefully selected premium car fleet, available at attractive rates",
+                    "show_description": true,
+                    "background_img": null
+                },
+                "form": {
+                    "pickup_date": "PICK UP DATE",
+                    "dropoff_date": "DROP OFF DATE",
+                    "brands_title": "MAKERS OF VEHICLE",
+                    "find": "FIND IT NOW",
+                    "active": true,
+                    "pickup_adresse": "PICK UP ADRESSE",
+                    "show_brands": true
+                },
+                "benefits": {
+                    "title": " OUR BENEFITS",
+                    "show_title": true,
+                    "description": "Luxury SALMIA Rental Services",
+                    "show_description": true,
+                    "show_section": true
+                },
+                "benefit_1": {
+                    "title": " Our Customers Always 100% Satisfied",
+                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit sed don eiusmod tempor enim minim veniam quis notrud exercitation",
+                    "icon": null,
+                    "show": true
+                },
+                "benefit_2": {
+                    "title": " We Provide Easier & Faster Bookings",
+                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit sed don eiusmod tempor enim minim veniam quis notrud exercitation",
+                    "icon": null,
+                    "show": true
+                },
+                "benefit_3": {
+                    "title": " Your Choice of Any Pickup Location",
+                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit sed don eiusmod tempor enim minim veniam quis notrud exercitation",
+                    "icon": null,
+                    "show": true
+                },
+                "guide": {
+                    "title": " HOW DOES THE SALMIA RENTAL WORKS",
+                    "show_title": true,
+                    "show": true,
+                    "background_image": null
+                },
+                "step_1": {
+                    "info": "Once selected, Book our auto and set a pickup date / time",
+                    "show_info": true,
+                    "icon": null,
+                    "show_icon": true
+                },
+                "step_2": {
+                    "info": "Once selected, Book our auto and set a pickup date / time",
+                    "show_info": true,
+                    "icon": null,
+                    "show_icon": true
+                },
+                "step_3": {
+                    "info": "Once selected, Book our auto and set a pickup date / time",
+                    "show_info": true,
+                    "icon": null,
+                    "show_icon": true
+                },
+                "fleets": {
+                    "title": "OUR RENTAL FLEETS",
+                    "show_title": true,
+                    "description": "Amco laboris nisi ut aliquip xea comod consequt duis aute irure dolor reprehenderit voluptate velit cillum dolore fugiat lore ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt",
+                    "show_description": true,
+                    "under_title": "Luxury SALMIA Rental Services",
+                    "show_under_title": true,
+                    "cars": null,
+                    "active": true
+                },
+                "services": {
+                    "title": "SALMIA Rental Service With a wide range of Vehicles",
+                    "description": "Integer tortor bibendum est faucibus gravida aliquam nulla lectus lacinia eget lorem acdua eros pharetral interdum quisque convallis nula dpsum val mualiq amet consectetur adipisicing sed eiusmod tem pory.  Ut enim ad minim ven quis nostrud exercitation ulamco laboris nisi ut aliquip exl dolor in reprehenderit voluptate velit non proident sunt in culpa.",
+                    "show_title": true,
+                    "show_description": true,
+                    "image_1": null,
+                    "image_2": null,
+                    "image_3": null,
+                    "show_image_1": true,
+                    "show_image_2": true,
+                    "show_image_3": true,
+                    "show_section": true
+                },
+                "service_1": {
+                    "title": "Easy & Competitive Prices",
+                    "description": "Faucibus gravida aliquam nulla lectus lacinia eget",
+                    "icon": null,
+                    "show_title": true,
+                    "show_description": true,
+                    "show_icon": true
+                },
+                "service_2": {
+                    "title": "Breakdown Assistance",
+                    "description": "Faucibus gravida aliquam nulla lectus lacinia eget",
+                    "icon": null,
+                    "show_title": true,
+                    "show_description": true,
+                    "show_icon": true
+                },
+                "service_3": {
+                    "title": "Trusted Rent Service",
+                    "description": "Faucibus gravida aliquam nulla lectus lacinia eget",
+                    "icon": null,
+                    "show_title": true,
+                    "show_description": true,
+                    "show_icon": true
+                },
+                "service_4": {
+                    "title": "24/7 Free Customer Support",
+                    "description": "Faucibus gravida aliquam nulla lectus lacinia eget",
+                    "icon": null,
+                    "show_title": true,
+                    "show_description": true,
+                    "show_icon": true
+                },
+                "booking": {
+                    "title": "Call Today For Booking Your Next Ride",
+                    "number": "(800) 650 743",
+                    "availability": "Operators available 24/7",
+                    "show_title": true,
+                    "show_number": true,
+                    "show_availability": true,
+                    "icon": null,
+                    "show_icon": true,
+                    "show_section": true
+                },
+                "news": {
+                    "title": "LATEST NEWS",
+                    "under_title": "Luxury SALMIA Rental Services",
+                    "show_title": true,
+                    "show_under_title": true,
+                    "description": "Amco laboris nisi ut aliquip xea comod consequt duis aute irure dolor reprehenderit voluptate velit cillum dolore fugiat lore ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt",
+                    "show_description": true,
+                    "info": null,
+                    "show_section": true
+                },
+                "reviews": {
+                    "title": "CUSTOMER REVIEWS",
+                    "under_title": "Luxury SALMIA Rental Services",
+                    "show_title": true,
+                    "show_under_title": true,
+                    "reviews": null,
+                    "show_reviews_section": true
+                },
+                "app": {
+                    "image": "65718a72049ebf8675bbe1c3",
+                    "show_image": true,
+                    "title": "DOWNLOAD OUR APP",
+                    "description": "Integer tortor bibendum est faucibus gravida aliquam nulla lectus lacinia eget lorem acdua eros pharetral interdum quisque convallis nula dpsum val mualiq amet consectetur adipisicing sed eiusmod tem ipsum pory.",
+                    "top_title": "Faster, easier access to car rental services",
+                    "show_title": true,
+                    "show_description": true,
+                    "show_top": true,
+                    "store_icon": null,
+                    "apple_icon": null,
+                    "show_play_store": true,
+                    "show_apple_store": true,
+                    "app_play_store_link": "https://play.google.com/store/apps",
+                    "app_apple_store_link": "https://www.apple.com/app-store/your value",
+                    "show_section": true
+                },
+                "footer": {
+                    "company_name": "SALMIA",
+                    "show_name": true,
+                    "logo": null,
+                    "show_logo": true,
+                    "copyright": "Copyright © 2024 by STOREINO. All Rights Reserved.",
+                    "show_copyright": true,
+                    "useful_links": {
+                        "title": "USEFUL LINKS",
+                        "show_title": true,
+                        "links": null,
+                        "show_links": true,
+                        "show_section": true
+                    },
+                    "terms": {
+                        "title": "OUR TERMS",
+                        "show_title": true,
+                        "links": null,
+                        "show_links": true,
+                        "show_terms": true
+                    },
+                    "showroom": {
+                        "title": "SHOWROOM",
+                        "show_title": true,
+                        "adresse": "USA, Auto, King St. 665087",
+                        "show_adresse": true,
+                        "number": "+7 234 949-58-83",
+                        "show_number": true,
+                        "email": "info@example.com",
+                        "show_email": true,
+                        "show_section": true,
+                        "copyright_notice": "© 2024 Auto LTD",
+                        "show_notice": true
+                    },
+                    "show_footer_section": true
+                },
+                "copyright": {
+                    "info": "Copyright © 2024 by STOREINO. All Rights Reserved.",
+                    "show_copyright": true,
+                    "show_section": true
+                },
+                "news_pge": {
+                    "search_for_news": true
+                },
+                "contact": {
+                    "title": "Contact Us",
+                    "show_title": true,
+                    "under_title": "GET IN TOUCH",
+                    "show_under_title": true
+                },
+                "maps": {
+                    "show_adresse": true
+                },
+                "alerts": {
+                    "proceed_to_checkout": "PROCEED_TO_CHECKOUT"
+                },
+                "blog": {
+                    "share_buttons": {
+                        "title": "Share This Page",
+                        "show_title": true,
+                        "show_share_buttons": true
+                    }
+                },
+                "cars": {
+                    "sorts": {
+                        "price_asc": "Expensive One",
+                        "price_desc": "Cheap One ",
+                        "name_asc ": "Name A-Z",
+                        "name_desc": "Name Z-A",
+                        "newest": "Fisrt Added",
+                        "oldest": "Last Added",
+                        "title": "SORT BY"
+                    },
+                    "no_products_text": "NO PRODUCTS FOUNDED",
+                    "reset_filter_text": "RESET FILTER",
+                    "booking_time_text": "BOOKING TIME",
+                    "pickup_date_text": "Drop-off Date",
+                    "pickup_location_text": "PICK-UP LOCATION",
+                    "price_range_text": "PRICE RANGE",
+                    "car_brand_text": "CAR BRAND"
+                },
+                "product": {
+                    "booking_this_car": {
+                        "text": "BOOKING THIS CAR"
+                    },
+                    "pickup_date": {
+                        "text": "PICK UP DATE",
+                        "active": true
+                    },
+                    "dropoff_date": {
+                        "text": "DROP OFF DATE",
+                        "active": true
+                    },
+                    "pickup_location": "PICK UP LOCATION",
+                    "dropoff_loction": "DROP OFF LOCATION",
+                    "extra_resources": {
+                        "text": "EXTRA RESOURCES",
+                        "active": true
+                    },
+                    "car_description": {
+                        "text": "CAR DESCRIPTION",
+                        "active": true
+                    },
+                    "equipement": {
+                        "text": "EQUIPMENT",
+                        "active": true
+                    },
+                    "specifications": {
+                        "text": "SPECIFICATIONS",
+                        "active": true
+                    },
+                    "auto_maker": "AUTO MAKER :",
+                    "engine_volume": "ENGINE VOLUME :",
+                    "year": "PRODUCTION YEAR :",
+                    "fuel": "FUEL TYPE :",
+                    "transmission": "TRANSMISSION :",
+                    "reviews": {
+                        "text": "REVIEWS",
+                        "active": true
+                    },
+                    "total_text": "TOTAL",
+                    "rent_it": "RENT IT"
+                },
+                "thanks": {
+                    "title": "Thanks",
+                    "description": "Thank you for your order",
+                    "back_to_cars_text": "Back To Explore Cars"
+                }
+            },
+            "style": {
+                "primary_color": "#de1b1b",
+                "second_color": "#f5f5f5"
+            }
+        }
+    },
+    "images": [
+        "https://storeno.b-cdn.net/themes/reserva/bazar-cover.jpg"
+      ],
+      "isActive": false,
+      "autoRenew": false,
+      "expiryDate": "2050-12-12T00:00:00.000Z",
+      "name": "SALMIA",
+      "url": "/themes/SALMIA",
+      "route": "SALMIA",
+      "defaults": [],
+      "paymentType": "yearly",
+      "payments": [],
+      "price": 22,
+      "description": "✔ Simple and easy theme to use ✔ Well presented and convertible store and product page ✔ SEO optimized ✔ Responsive to all devices",
+      "publicName": "SALMIA - Versatile Responsive Car Rental Template"
+}

@@ -1,0 +1,6 @@
+ajoute lines descripte caracteristiques of the product
+refe
+eta
+materiel
+color
+...[Client can add any line of caracteristiques he want]

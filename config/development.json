@@ -1,0 +1,7 @@
+{
+    "env": "development",
+    "token": {
+        "clientId": "660e6f6791b52953f860652a-salmia.storeino.world",
+        "clientSecret": "527dOdZGUQcTrKZnZvtXSAip"
+    }
+}
