@@ -38,6 +38,9 @@
   "SiCarousel": {
     "description": "Auto imported from components/si/Carousel.vue"
   },
+  "SiImage": {
+    "description": "Auto imported from components/si/Image.vue"
+  },
   "SiLoader": {
     "description": "Auto imported from components/si/Loader.vue"
   },
@@ -50,8 +53,8 @@
   "SiProduct": {
     "description": "Auto imported from components/si/Product.vue"
   },
-  "SiProductCart": {
-    "description": "Auto imported from components/si/ProductCart.vue"
+  "SiProductcart": {
+    "description": "Auto imported from components/si/Productcart.vue"
   },
   "SiProductDetails": {
     "description": "Auto imported from components/si/ProductDetails.vue"

@@ -7,39 +7,137 @@
 
 
             <h1 class="text-black font-bold text-3xl text-center pb-16">
-                LES PIECES LES PLUS RECHERCHEES
+                {{ products.title }}
             </h1>
 
-            <!-- Render selectionTitles -->
-            <div class="flex">
-                <div v-for="(item, index) in selectionTitles" :key="index" class="mr-4">
-                    <div @click="selectTitle(index)"
-                        :class="selectedIndex === index ? 'font-semibold text-black cursor-pointer' : 'font-normal text-gray-600 cursor-pointer'">
-                        {{ item.title }}
-                    </div>
-                </div>
-            </div>
-
             <!-- Render content based on selectedIndex -->
-            <div class="mt-8">
+            <!-- <div class="mt-8">
                 <div v-if="selectedIndex !== null">
                     <div class="flex flex-wrap">
                         <div v-for="piece in pieces[selectedIndex].items" :key="piece.reference"
-                            class="w-1/5 px-4 mb-4">
-                            <div class="flex items-center">
+                            class="w-1/4 px-4 mb-4">
+                            <div class="flex flex-col items-center">
                                 <div>
-                                    <img :src="piece.image" alt="Piece Image" class="w-16 h-16 object-contain mr-4">
+                                    <img :src="piece.image" alt="Piece Image" class="w-46 h-46 object-contain mr-4 border border-gray-200">
                                 </div>
-                                <div>
-                                    <div class="font-semibold">{{ piece.brand }}</div>
+                                <div class="flex flex-col items-start">
+                                    <div class="font-semibold">{{ piece.descriptions }}</div>
+                                    <div class="font-light text-gray-400">{{ piece.brand }}</div>
+                                    <div class="font-light text-gray-400">Ref: {{ piece.reference }}</div>
+                                    <div class="flex items-center">
+                                        <div class="flex items-center">
+                                            <span v-for="star in Math.floor(piece.review.rating)"
+                                                class="text-yellow-400">★</span>
+                                            <span v-if="piece.review.rating % 1 !== 0" class="text-yellow-400">½</span>
+                                        </div>
+                                        <div class="ml-2">{{ piece.review.rating }}</div>
+                                        <div class="ml-2">{{ piece.review.reviews.length }} reviews</div>
+                                    </div>
+
                                     <div class="text-sm">{{ piece.price }}</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                <div data-aos-anchor-placement="bottom-bottom">
+                    <si-carousel component="si-product" :list="items"></si-carousel>
+                </div>
+            </div> -->
 
+
+            <!-- <div class="mt-8">
+                
+                <div v-if="selectedPieceIndex !== null" class="flex flex-wrap">
+                    <div v-for="(item, itemIndex) in pieces[selectedPieceIndex].items" :key="itemIndex"
+                        class="w-1/4 px-4 mb-4">
+                        <div class="flex flex-col items-center">
+                            <div>
+                                <img :src="item.image" alt="Piece Image"
+                                    class="w-46 h-46 object-contain mr-4 border border-gray-200">
+                            </div>
+                            <div class="flex flex-col items-start">
+                                <div class="font-semibold">{{ item.descriptions }}</div>
+                                <div class="font-light text-gray-400">{{ item.brand }}</div>
+                                <div class="font-light text-gray-400">Ref: {{ item.reference }}</div>
+                                <div class="flex items-center">
+                                    <div class="flex items-center">
+                                        <span v-for="star in Math.floor(item.review.rating)"
+                                            class="text-yellow-400">★</span>
+                                        <span v-if="item.review.rating % 1 !== 0" class="text-yellow-400">½</span>
+                                    </div>
+                                    <div class="ml-2">{{ item.review.rating }}</div>
+                                    <div class="ml-2">{{ item.review.reviews.length }} reviews</div>
+                                </div>
+                                <div class="text-sm">{{ item.price }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos-anchor-placement="bottom-bottom">
+                    <si-carousel component="si-product" :list="items"></si-carousel>
+                </div>
+            </div> -->
+
+            <!-- <div>
+                Display titles of selected collections
+                <div v-for="collection in selectedCollections" :key="collection.slug">
+                    <h2>{{ collection.name }}</h2>
+                    Carousel for products of the selected collection
+                    <div class="carousel">
+                        <div class="carousel-item" v-for="(item, index) in getFilteredProducts(collection.slug)"
+                            :key="index">
+                            Display product info
+                            <div class="w-1/4 px-4 mb-4">
+                                <div class="flex flex-col items-center">
+                                    <div>
+                                        <img :src="item.image" alt="Piece Image"
+                                            class="w-46 h-46 object-contain mr-4 border border-gray-200">
+                                    </div>
+                                    <div class="flex flex-col items-start">
+                                        <div class="font-semibold">{{ item.descriptions }}</div>
+                                        <div class="font-light text-gray-400">{{ item.brand }}</div>
+                                        <div class="font-light text-gray-400">Ref: {{ item.reference }}</div>
+                                        <div class="flex items-center">
+                                            <div class="flex items-center">
+                                                <span v-for="star in Math.floor(item.review.rating)"
+                                                    class="text-yellow-400">★</span>
+                                                <span v-if="item.review.rating % 1 !== 0"
+                                                    class="text-yellow-400">½</span>
+                                            </div>
+                                            <div class="ml-2">{{ item.review.rating }}</div>
+                                            <div class="ml-2">{{ item.review.reviews.length }} reviews</div>
+                                        </div>
+                                        <div class="text-sm">{{ item.price }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+
+            <!-- <div>
+                <div class="flex">
+                    <div v-for="collection in selectedCollections" :key="collection.slug"
+                        @click="selectCollection(collection.slug)" class="cursor-pointer mx-2">
+                        <h2>{{ collection.name }}</h2>
+                    </div>
+                </div>
+                <div v-for="collection in selectedCollections" :key="collection.slug">
+                    <h2 v-if="collection.slug === selectedCollectionSlug">{{ collection.name }}</h2>
+                    <div v-if="collection.slug === selectedCollectionSlug">
+
+                        <div>
+                            <div data-aos-anchor-placement="bottom-bottom">
+                                <si-carousel component="si-product-cart" :list="getFilteredProducts(selectedCollectionSlug)"></si-carousel>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div> -->
 
         </div>
 
@@ -54,442 +152,42 @@ export default {
     data() {
         return {
 
-            selectionTitles: [
-
-                {
-                    title: 'Moteur et Transmission',
-                },
-                {
-                    title: 'Suspension et Direction',
-                },
-                {
-                    title: 'Accessiores',
-                },
-                {
-                    title: 'Électronique',
-                },
-                {
-                    title: 'Freins & Roues',
-                },
-                {
-                    title: 'Echappement',
-                },
-                {
-                    title: 'Éclairage ',
-                },
-                {
-                    title: 'Carrosserie et Intérieur',
-                },
-                {
-                    title: 'Thermique & Cèlimatisation',
-                },
-                {
-                    title: 'Roues & Pneus',
-                },
-
-            ],
-
-            selectedIndex: 0,
-
-            pieces: [
-                {
-                    title: 'Moteur et Transmission',
-                    items: [
-                        {
-                            image: 'https://storeno.b-cdn.net/stores/4-2024/1712325029829.png',
-                            brand: 'jeep cherokee 11 PHASE 1',
-                            reference: 65479753222,
-                            review: {
-                                reviews: ["65adf65163a3bd8a8785736e", "65adf67463a3bd8a87857381"],
-                                rating: 3.5
-                            },
-                            price: '1200.00 DH'
-                        },
-                        {
-                            image: 'https://storeno.b-cdn.net/stores/4-2024/1712325029829.png',
-                            title: 'Moteur et Transmission',
-                            brand: 'jeep cherokee 11 PHASE 1',
-                            reference: 65479753222,
-                            review: {
-                                reviews: [
-                                    "65adf65163a3bd8a8785736e",
-                                    "65adf67463a3bd8a87857381"
-                                ],
-                                rating: 3.5
-                            },
-                            price: '1200.00 DH'
-                        },
-                        {
-                            image: 'https://storeno.b-cdn.net/stores/4-2024/1712325029829.png',
-                            title: 'Moteur et Transmission',
-                            brand: 'jeep cherokee 11 PHASE 1',
-                            reference: 65479753222,
-                            review: {
-                                reviews: [
-                                    "65adf65163a3bd8a8785736e",
-                                    "65adf67463a3bd8a87857381"
-                                ],
-                                rating: 3.5
-                            },
-                            price: '1200.00 DH'
-                        },
-                    ]
-                },
-                {
-                    title: 'Suspension et Direction',
-                    items: [
-                        {
-                            image: 'https://storeno.b-cdn.net/stores/4-2024/1712325029829.png',
-                            brand: 'jeep cherokee 11 PHASE 1',
-                            reference: 65479753222,
-                            review: {
-                                reviews: ["65adf65163a3bd8a8785736e", "65adf67463a3bd8a87857381"],
-                                rating: 3.5
-                            },
-                            price: '1200.00 DH'
-                        },
-                        {
-                            image: 'https://storeno.b-cdn.net/stores/4-2024/1712325029829.png',
-                            title: 'Moteur et Transmission',
-                            brand: 'jeep cherokee 11 PHASE 1',
-                            reference: 65479753222,
-                            review: {
-                                reviews: [
-                                    "65adf65163a3bd8a8785736e",
-                                    "65adf67463a3bd8a87857381"
-                                ],
-                                rating: 3.5
-                            },
-                            price: '1200.00 DH'
-                        },
-                        {
-                            image: 'https://storeno.b-cdn.net/stores/4-2024/1712325029829.png',
-                            title: 'Moteur et Transmission',
-                            brand: 'jeep cherokee 11 PHASE 1',
-                            reference: 65479753222,
-                            review: {
-                                reviews: [
-                                    "65adf65163a3bd8a8785736e",
-                                    "65adf67463a3bd8a87857381"
-                                ],
-                                rating: 3.5
-                            },
-                            price: '1200.00 DH'
-                        },
-                        {
-                            image: 'https://storeno.b-cdn.net/stores/4-2024/1712325029829.png',
-                            title: 'Moteur et Transmission',
-                            brand: 'jeep cherokee 11 PHASE 1',
-                            reference: 65479753222,
-                            review: {
-                                reviews: [
-                                    "65adf65163a3bd8a8785736e",
-                                    "65adf67463a3bd8a87857381"
-                                ],
-                                rating: 3.5
-                            },
-                            price: '1200.00 DH'
-                        },
-                    ]
-                },
-                {
-                    title: 'Accessiores',
-                    items: [
-                        {
-                            image: 'https://storeno.b-cdn.net/stores/4-2024/1712325029829.png',
-                            brand: 'jeep cherokee 11 PHASE 1',
-                            reference: 65479753222,
-                            review: {
-                                reviews: ["65adf65163a3bd8a8785736e", "65adf67463a3bd8a87857381"],
-                                rating: 3.5
-                            },
-                            price: '1200.00 DH'
-                        },
-                        {
-                            image: 'https://storeno.b-cdn.net/stores/4-2024/1712325029829.png',
-                            title: 'Moteur et Transmission',
-                            brand: 'jeep cherokee 11 PHASE 1',
-                            reference: 65479753222,
-                            review: {
-                                reviews: [
-                                    "65adf65163a3bd8a8785736e",
-                                    "65adf67463a3bd8a87857381"
-                                ],
-                                rating: 3.5
-                            },
-                            price: '1200.00 DH'
-                        },
-                    ]
-                },
-                {
-                    title: 'Électronique',
-                    items: [
-                        {
-                            image: 'https://storeno.b-cdn.net/stores/4-2024/1712325029829.png',
-                            brand: 'jeep cherokee 11 PHASE 1',
-                            reference: 65479753222,
-                            review: {
-                                reviews: ["65adf65163a3bd8a8785736e", "65adf67463a3bd8a87857381"],
-                                rating: 3.5
-                            },
-                            price: '1200.00 DH'
-                        },
-                        {
-                            image: 'https://storeno.b-cdn.net/stores/4-2024/1712325029829.png',
-                            title: 'Moteur et Transmission',
-                            brand: 'jeep cherokee 11 PHASE 1',
-                            reference: 65479753222,
-                            review: {
-                                reviews: [
-                                    "65adf65163a3bd8a8785736e",
-                                    "65adf67463a3bd8a87857381"
-                                ],
-                                rating: 3.5
-                            },
-                            price: '1200.00 DH'
-                        },
-                    ]
-                },
-                {
-                    title: 'Freins & Roues',
-                    items: [
-                        {
-                            image: 'https://storeno.b-cdn.net/stores/4-2024/1712325029829.png',
-                            brand: 'jeep cherokee 11 PHASE 1',
-                            reference: 65479753222,
-                            review: {
-                                reviews: ["65adf65163a3bd8a8785736e", "65adf67463a3bd8a87857381"],
-                                rating: 3.5
-                            },
-                            price: '1200.00 DH'
-                        },
-                        {
-                            image: 'https://storeno.b-cdn.net/stores/4-2024/1712325029829.png',
-                            title: 'Moteur et Transmission',
-                            brand: 'jeep cherokee 11 PHASE 1',
-                            reference: 65479753222,
-                            review: {
-                                reviews: [
-                                    "65adf65163a3bd8a8785736e",
-                                    "65adf67463a3bd8a87857381"
-                                ],
-                                rating: 3.5
-                            },
-                            price: '1200.00 DH'
-                        },
-                    ]
-                },
-                {
-                    title: 'Echappement',
-                    items: [
-                        {
-                            image: 'https://storeno.b-cdn.net/stores/4-2024/1712325029829.png',
-                            brand: 'jeep cherokee 11 PHASE 1',
-                            reference: 65479753222,
-                            review: {
-                                reviews: ["65adf65163a3bd8a8785736e", "65adf67463a3bd8a87857381"],
-                                rating: 3.5
-                            },
-                            price: '1200.00 DH'
-                        },
-                        {
-                            image: 'https://storeno.b-cdn.net/stores/4-2024/1712325029829.png',
-                            title: 'Moteur et Transmission',
-                            brand: 'jeep cherokee 11 PHASE 1',
-                            reference: 65479753222,
-                            review: {
-                                reviews: [
-                                    "65adf65163a3bd8a8785736e",
-                                    "65adf67463a3bd8a87857381"
-                                ],
-                                rating: 3.5
-                            },
-                            price: '1200.00 DH'
-                        },
-                    ]
-                },
-                {
-                    title: 'Éclairage',
-                    items: [
-                        {
-                            image: 'https://storeno.b-cdn.net/stores/4-2024/1712325029829.png',
-                            brand: 'jeep cherokee 11 PHASE 1',
-                            reference: 65479753222,
-                            review: {
-                                reviews: ["65adf65163a3bd8a8785736e", "65adf67463a3bd8a87857381"],
-                                rating: 3.5
-                            },
-                            price: '1200.00 DH'
-                        },
-                        {
-                            image: 'https://storeno.b-cdn.net/stores/4-2024/1712325029829.png',
-                            title: 'Moteur et Transmission',
-                            brand: 'jeep cherokee 11 PHASE 1',
-                            reference: 65479753222,
-                            review: {
-                                reviews: [
-                                    "65adf65163a3bd8a8785736e",
-                                    "65adf67463a3bd8a87857381"
-                                ],
-                                rating: 3.5
-                            },
-                            price: '1200.00 DH'
-                        },
-                    ]
-                },
-                {
-                    title: 'Carrosserie et Intérieur',
-                    items: [
-                        {
-                            image: 'https://storeno.b-cdn.net/stores/4-2024/1712325029829.png',
-                            brand: 'jeep cherokee 11 PHASE 1',
-                            reference: 65479753222,
-                            review: {
-                                reviews: ["65adf65163a3bd8a8785736e", "65adf67463a3bd8a87857381"],
-                                rating: 3.5
-                            },
-                            price: '1200.00 DH'
-                        },
-                        {
-                            image: 'https://storeno.b-cdn.net/stores/4-2024/1712325029829.png',
-                            title: 'Moteur et Transmission',
-                            brand: 'jeep cherokee 11 PHASE 1',
-                            reference: 65479753222,
-                            review: {
-                                reviews: [
-                                    "65adf65163a3bd8a8785736e",
-                                    "65adf67463a3bd8a87857381"
-                                ],
-                                rating: 3.5
-                            },
-                            price: '1200.00 DH'
-                        },
-                    ]
-                },
-                {
-                    title: 'Thermique & Cèlimatisation',
-                    items: [
-                        {
-                            image: 'https://storeno.b-cdn.net/stores/4-2024/1712325029829.png',
-                            brand: 'jeep cherokee 11 PHASE 1',
-                            reference: 65479753222,
-                            review: {
-                                reviews: ["65adf65163a3bd8a8785736e", "65adf67463a3bd8a87857381"],
-                                rating: 3.5
-                            },
-                            price: '1200.00 DH'
-                        },
-                        {
-                            image: 'https://storeno.b-cdn.net/stores/4-2024/1712325029829.png',
-                            title: 'Moteur et Transmission',
-                            brand: 'jeep cherokee 11 PHASE 1',
-                            reference: 65479753222,
-                            review: {
-                                reviews: [
-                                    "65adf65163a3bd8a8785736e",
-                                    "65adf67463a3bd8a87857381"
-                                ],
-                                rating: 3.5
-                            },
-                            price: '1200.00 DH'
-                        },
-                    ]
-                },
-                {
-                    title: 'Roues & Pneus',
-                    items: [
-                        {
-                            image: 'https://storeno.b-cdn.net/stores/4-2024/1712325029829.png',
-                            brand: 'jeep cherokee 11 PHASE 1',
-                            reference: 65479753222,
-                            review: {
-                                reviews: ["65adf65163a3bd8a8785736e", "65adf67463a3bd8a87857381"],
-                                rating: 3.5
-                            },
-                            price: '1200.00 DH'
-                        },
-                        {
-                            image: 'https://storeno.b-cdn.net/stores/4-2024/1712325029829.png',
-                            title: 'Moteur et Transmission',
-                            brand: 'jeep cherokee 11 PHASE 1',
-                            reference: 65479753222,
-                            review: {
-                                reviews: [
-                                    "65adf65163a3bd8a8785736e",
-                                    "65adf67463a3bd8a87857381"
-                                ],
-                                rating: 3.5
-                            },
-                            price: '1200.00 DH'
-                        },
-                    ]
-                }
-
-            ],
-
-            // pieces: [
-
-            //     {
-            //         image: 'https://storeno.b-cdn.net/stores/4-2024/1712325029829.png',
-            //         title: 'Moteur et Transmission',
-            //         brand: 'jeep cherokee 11 PHASE 1',
-            //         reference: 65479753222,
-            //         review: {
-            //             reviews: [
-            //                 "65adf65163a3bd8a8785736e",
-            //                 "65adf67463a3bd8a87857381"
-            //             ],
-            //             rating: 3.5
-            //         },
-            //         price: '1200.00 DH'
-
-            //     },
-            //     {
-            //         image: 'https://storeno.b-cdn.net/stores/4-2024/1712325029829.png',
-            //         title: 'Moteur et Transmission',
-            //         brand: 'jeep cherokee 11 PHASE 1',
-            //         reference: 65479753222,
-            //         review: {
-            //             reviews: [
-            //                 "65adf65163a3bd8a8785736e",
-            //                 "65adf67463a3bd8a87857381"
-            //             ],
-            //             rating: 3.5
-            //         },
-            //         price: '1200.00 DH'
-            //     },
-            //     {
-            //         image: 'https://storeno.b-cdn.net/stores/4-2024/1712325029829.png',
-            //         title: 'Moteur et Transmission',
-            //         brand: 'jeep cherokee 11 PHASE 1',
-            //         reference: 65479753222,
-            //         review: {
-            //             reviews: [
-            //                 "65adf65163a3bd8a8785736e",
-            //                 "65adf67463a3bd8a87857381"
-            //             ],
-            //             rating: 3.5
-            //         },
-            //         price: '1200.00 DH'
-            //     },
-            //     {
-            //         image: 'https://storeno.b-cdn.net/stores/4-2024/1712325029829.png',
-            //         title: 'Moteur et Transmission',
-            //         brand: 'jeep cherokee 11 PHASE 1',
-            //         reference: 65479753222,
-            //         review: {
-            //             reviews: [
-            //                 "65adf65163a3bd8a8785736e",
-            //                 "65adf67463a3bd8a87857381"
-            //             ],
-            //             rating: 3.5
-            //         },
-            //         price: '1200.00 DH'
-            //     },
-            // ]
-
+            selectedCollectionSlug: null,
+            productItems: [],
+            products: this.$settings.sections.products_per_collections,
+            selectedCollections: []
         };
     },
+    methods: {
+
+        getFilteredProducts(collectionSlug) {
+            return this.productItems.filter(item => item.collections.some(collection => collection.slug === collectionSlug));
+        },
+        // Select a collection
+        selectCollection(collectionSlug) {
+            this.selectedCollectionSlug = collectionSlug;
+        }
+    },
+    async fetch() {
+        try {
+            const filter = {};
+
+            const { data } = await this.$storeino.products.search(filter)
+            this.productItems = data.results;
+
+            if (this.$settings.products_per_collections.collections.length > 0) {
+                this.selectedCollections = this.$settings.sections.products_per_collections.collections;
+            } else {
+                const { data } = await this.$storeino.collections.search(filter)
+                this.selectedCollections = data.results;
+            }
+
+        } catch (e) {
+            console.log({ e });
+        }
+        this.loading = false;
+
+    }
 
 }
 </script>
@@ -498,56 +196,14 @@ export default {
 .bg {
     background-color: #f7f7f7;
 }
-</style>
 
-
-<!-- 
-
-    <template>
-    <div v-if="fleets.active" class="container pb-40 pt-20 ">
-
-        <div v-if="fleets.show_title" class="flex flex-col justify-center items-center lg:pb-28 lg:px-80 px-10">
-            <h1 data-aos="fade-up" class="text-black font-semibold text-3xl text-center">
-                {{ fleets.title }}
-            </h1>
-
-            <p data-aos="fade-up" v-if="fleets.show_under_title"
-                class="text-gray-400 font-normal italic font-serif text-lg pb-8">
-                {{ fleets.under_title }}
-            </p>
-
-            <p data-aos="fade-up" v-if="fleets.show_description"
-                class="text-black text-center text-sm font-light leading-loose">
-                {{ fleets.description }}
-            </p>
-
-        </div>
-
-
-        <div v-if="fleets.cars"  data-aos-anchor-placement="bottom-bottom" >
-            <si-carousel component="si-car" :list="fleets.cars"></si-carousel>
-        </div>
-
-    </div>
-</template>
-  
-<script>
-
-export default {
-    data() {
-        return {
-            fleets: this.$settings.sections.fleets,
-        };
-    },
-
+.carousel {
+    display: flex;
+    flex-wrap: wrap;
 }
-</script>
-  
-<style>
-.bg {
-    background-color: #f7f7f7;
+
+.carousel-item {
+    flex: 0 0 25%;
+    max-width: 25%;
 }
 </style>
-  
-
- -->

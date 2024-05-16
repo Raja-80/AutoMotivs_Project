@@ -3,60 +3,84 @@
     "name": "cart",
     "path": "/cart",
     "component": "C:\\\\Users\\\\hp\\\\Documents\\\\SALMIA\\\\pages\\\\cart\\\\index.vue",
-    "chunkName": "pages/cart/index"
+    "chunkName": "pages/cart/index",
+    "_name": "_37f415e2"
+  },
+  {
+    "name": "contact",
+    "path": "/contact",
+    "component": "C:\\\\Users\\\\hp\\\\Documents\\\\SALMIA\\\\pages\\\\contact\\\\index.vue",
+    "chunkName": "pages/contact/index",
+    "_name": "_90d70c9c"
+  },
+  {
+    "name": "contact copy",
+    "path": "/contact%20copy",
+    "component": "C:\\\\Users\\\\hp\\\\Documents\\\\SALMIA\\\\pages\\\\contact copy\\\\index.vue",
+    "chunkName": "pages/contact copy/index",
+    "_name": "_6bba526d"
   },
   {
     "name": "error",
     "path": "/error",
     "component": "C:\\\\Users\\\\hp\\\\Documents\\\\SALMIA\\\\pages\\\\error.vue",
-    "chunkName": "pages/error"
+    "chunkName": "pages/error",
+    "_name": "_f30f1e90"
   },
   {
     "name": "thanks",
     "path": "/thanks",
     "component": "C:\\\\Users\\\\hp\\\\Documents\\\\SALMIA\\\\pages\\\\thanks\\\\index.vue",
-    "chunkName": "pages/thanks/index"
+    "chunkName": "pages/thanks/index",
+    "_name": "_04bd4099"
   },
   {
     "name": "wishlist",
     "path": "/wishlist",
     "component": "C:\\\\Users\\\\hp\\\\Documents\\\\SALMIA\\\\pages\\\\wishlist\\\\index.vue",
-    "chunkName": "pages/wishlist/index"
+    "chunkName": "pages/wishlist/index",
+    "_name": "_1379661d"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\hp\\\\Documents\\\\SALMIA\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_42b25282"
   },
   {
     "name": "account-route",
     "path": "/account/:route?",
     "component": "C:\\\\Users\\\\hp\\\\Documents\\\\SALMIA\\\\pages\\\\account\\\\_route.vue",
-    "chunkName": "pages/account/_route"
+    "chunkName": "pages/account/_route",
+    "_name": "_6aa741b2"
   },
   {
     "name": "pages-slug",
     "path": "/pages/:slug?",
     "component": "C:\\\\Users\\\\hp\\\\Documents\\\\SALMIA\\\\pages\\\\pages\\\\_slug.vue",
-    "chunkName": "pages/pages/_slug"
+    "chunkName": "pages/pages/_slug",
+    "_name": "_a7488f74"
   },
   {
     "name": "posts-slug",
     "path": "/posts/:slug?",
     "component": "C:\\\\Users\\\\hp\\\\Documents\\\\SALMIA\\\\pages\\\\posts\\\\_slug.vue",
-    "chunkName": "pages/posts/_slug"
+    "chunkName": "pages/posts/_slug",
+    "_name": "_266e5cd7"
   },
   {
     "name": "products-slug",
     "path": "/products/:slug?",
     "component": "C:\\\\Users\\\\hp\\\\Documents\\\\SALMIA\\\\pages\\\\products\\\\_slug.vue",
-    "chunkName": "pages/products/_slug"
+    "chunkName": "pages/products/_slug",
+    "_name": "_56a17fd6"
   },
   {
     "name": "shop-slug",
     "path": "/shop/:slug?",
     "component": "C:\\\\Users\\\\hp\\\\Documents\\\\SALMIA\\\\pages\\\\shop\\\\_slug.vue",
-    "chunkName": "pages/shop/_slug"
+    "chunkName": "pages/shop/_slug",
+    "_name": "_16b4f304"
   }
 ]

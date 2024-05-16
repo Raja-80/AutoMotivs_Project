@@ -1,7 +1,7 @@
 <template>
     <div class="container pb-20 ">
-        <!-- Render selectionTitles -->
-        <div class="flex flex-wrap shadow-lg shadow-lg">
+
+        <!-- <div class="flex flex-wrap shadow-lg ">
             <div v-for="(item, index) in selectionTitles" :key="index" class="w-full md:w-1/2 lg:w-1/4 p-4">
                 <div @click="selectTitle(index)" class="flex items-center rounded-lg p-4 transition duration-300">
                     <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,6 +28,33 @@
                     </div>
                 </div>
             </div>
+        </div> -->
+
+        <div v-if="services.items" class="flex flex-wrap flex-row justify-center w-full shadow-lg">
+
+            <div v-for="(key, i) in Object.keys(services.items)" :key="i"
+                class="text-black ">
+
+                <nuxt-link :to="services.items[key].url" class="flex flex-row items-center text-black py-6 px-3">
+                    <nuxt-img class=" h-11 mb-6 pr-2 "
+                        :src="services.items[key].icon != null ? services.items[key].icon.src : 'https://storeno.b-cdn.net/stores/2-2024/1707478027908.png'"
+                        alt="company logo" />
+
+                    <div class="w-full ml-2">
+                        <h2 class="text-black text-lg font-bold">
+                            {{ services.items[key].title }}
+                        </h2>
+
+                        <p class=" text-xs text-gray-400">
+                            {{ services.items[key].description }}
+
+                        </p>
+                    </div>
+                </nuxt-link>
+
+
+            </div>
+
         </div>
 
     </div>
@@ -38,31 +65,7 @@
 export default {
     data() {
         return {
-
-            selectionTitles: [
-                {
-                    title: 'Pièces au meillieur prix',
-                    description: "Jusqu'à 70% moins cher que le neuf",
-
-                },
-                {
-                    title: 'Pièces au meillieur prix',
-                    description: "Jusqu'à 70% moins cher que le neuf",
-
-                },
-                {
-                    title: 'Pièces au meillieur prix',
-                    description: "Jusqu'à 70% moins cher que le neuf",
-
-                },
-                {
-                    title: 'Pièces au meillieur prix',
-                    description: "Jusqu'à 70% moins cher que le neuf",
-
-                },
-            ],
-
-            selectedIndex: 0
+            services: this.$settings.sections.services,
 
         };
     },

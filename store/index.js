@@ -24,7 +24,7 @@ const createStore = () => {
         settings: null,
         domain: 'www.storeino.com',
         apps: [],
-        token: null,
+        token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdG9yZSI6eyJfaWQiOiI2NjBlNmY2NzkxYjUyOTUzZjg2MDY1MmEifSwic291cmNlIjoiVEhFTUVTIiwiaWF0IjoxNzEzODYzMDUxLCJleHAiOjE3NDUzOTkwNTF9.s-U71pOecna8JNVHcyGEu2AJavmLTz8NLEugvs9uMRI",
         primary: {
           rgb: { r: 0, g: 0, b: 0 },
           color: '#000000'

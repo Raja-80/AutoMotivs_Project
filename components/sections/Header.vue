@@ -3,8 +3,9 @@
 
         <div class=" absolute top-10 left-0 right-0">
 
-            <nav class="container flex justify-between items-center py-6 text-white">
-                <div class="cursor-pointer flex items-center lg-pl-0 pl-6">
+            <nav class="container flex justify-between items-start py-6 text-white">
+
+                <div class=" flex items-start lg-pl-0 pl-6 header-menu">
 
                     <nuxt-img v-if="header.show_logo" :to="`/`" class="h-10 "
                         :src="header.logo != null ? header.logo.src : ''" alt="company logo" />
@@ -15,101 +16,39 @@
                     </nuxt-link>
 
                     <!-- Desktop Menu -->
-                    <div class="hidden lg:flex flex-row justify-center items-center  relative">
+                    <div class="hidden lg:flex flex-row justify-center items-start relative">
 
-                        <!-- 'Toutes les catégories' DropDown -->
-                        <div class="flex flex-row header-menu">
-                            <ul v-for="(item, i) in otherMenu" :key="i" class="flex flex-col relative px-2"
-                                :class="{ 'hovered': item.isClicked }">
-                                <li class="flex flex-row text items-center justify-between w-full rounded-md "
-                                    @click="item.isClicked = !item.isClicked">
-                                    <span
-                                        class="w-full flex cursor-pointer hover:text-red-500 transition duration-1000 ease-in-out text-xs">
+
+                        <div v-if="header.menu" class="flex flex-row items-start header-menu">
+                            <ul v-for="(item, i) in header.menu.items" :key="i" class="flex flex-col header-menu">
+                                <li class="flex  items-center mb-1 justify-between w-full text-xs header-menu">
+                                    <router-link class="p-2 m-1 w-full flex hover:text-red-700" :to="item.url">
                                         {{ item.text }}
-                                    </span>
-                                    <button class="text-white p-2"
-                                        @click="activeId = (activeId === item._id) ? null : item._id; closeMenu()">
-                                        <svg v-if="item.childrens && item.childrens.length > 0" class="w-3 transform"
-                                            :class="{ 'rotate-180': item.isClicked }" xmlns="http://www.w3.org/2000/svg"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px"
-                                            viewBox="0 0 330 330" style=" fill: white;" xml:space="preserve">
-                                            <path
-                                                d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393  c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393  s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z" />
-                                        </svg>
-                                    </button>
-                                </li>
-                                <transition name="slide">
-                                    <div v-if="item.isClicked || item._id == activeId"
-                                        class="bg-gray-50 py-2 px-3 rounded-md absolute top-full"
-                                        style="box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
-                                        <div v-for="(child, i) in item.childrens" :key="i" class="">
-                                            <a class="flex p-3 mx-1 rounded-md text-black text-xs mb-2  hover:text-red-500 duration-10 hover:bg-gray-200 "
-                                                :href="child.url">{{ child.text }}</a>
-                                        </div>
-                                    </div>
-                                </transition>
-                            </ul>
-                        </div>
-
-                        <div class="text-xs mx-3 my-6">
-                            <nuxt-link :to="'/marques'"
-                                class=" text-white  hover:text-red-500 transition duration-1000 ease-in-out ">
-                                Marques
-                            </nuxt-link>
-
-                        </div>
-
-                        <div class="text-xs mx-3 my-6">
-                            <nuxt-link :to="'/marques'"
-                                class=" text-white  hover:text-red-500 transition duration-1000 ease-in-out ">
-                                Partenaires
-                            </nuxt-link>
-                        </div>
-
-                        <div class="text-xs mx-3 my-6">
-                            <nuxt-link :to="'/marques'"
-                                class=" text-white  hover:text-red-500 transition duration-1000 ease-in-out ">
-                                FAQ's
-                            </nuxt-link>
-                        </div>
-
-                        <div class="text-xs mx-3 my-6">
-                            <nuxt-link :to="'/marques'"
-                                class=" text-white  hover:text-red-500 transition duration-1000 ease-in-out ">
-                                Contacts
-                            </nuxt-link>
-                        </div>
-
-                        <!-- <div v-if="header.menu" class="flex flex-row">
-                            <ul v-for="(item, i) in header.menu.items" :key="i" class="flex flex-col">
-                                <li class="flex  items-center mb-1 justify-between w-full text-xs">
-                                    <router-link class="p-2 m-1 w-full flex hover:text-green-700" :to="item.url">
-                                    {{ item.text }}</router-link>
+                                    </router-link>
                                     <button class=" p-2 mx-1"
                                         @click="activeId = activeId != item._id ? item._id : null">
-                                        <si-svg>
-                                            <svg v-if="item.childrens && item.childrens.length > 0"
-                                                class="w-3 transform" :class="activeId == item._id ? 'rotate-180' : ''"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px"
-                                                viewBox="0 0 330 330" style="enable-background:new 0 0 330 330;"
-                                                xml:space="preserve">
-                                                <path
-                                                    d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393  c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393  s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z" />
-                                            </svg>
-                                        </si-svg>
+                                        <!-- <si-svg> -->
+                                        <svg v-if="item.childrens && item.childrens.length > 0" class="w-3 transform"
+                                            :class="activeId == item._id ? 'rotate-180' : ''"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px"
+                                            viewBox="0 0 330 330" style="enable-background:new 0 0 330 330;"
+                                            xml:space="preserve">
+                                            <path fill="white"
+                                                d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393  c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393  s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z" />
+                                        </svg>
+                                        <!-- </si-svg> -->
                                     </button>
                                 </li>
                                 <transition name="slide">
-                                    <div v-if="item._id == activeId">
+                                    <div v-if="item._id == activeId" class="bg-gray-100 rounded-md text-black">
                                         <div v-for="(item, i) in item.childrens" :key="i" class="">
                                             <router-link
-                                                class="p-2 m-1 hover:bg-gray-50 rounded-md text-xs hover:text-gray-700 flex"
+                                                class="text-black p-2 m-1 hover:bg-gray-50 rounded-md text-xs hover:text-gray-700 flex"
                                                 :to="item.url">{{ item.text }}</router-link>
                                             <ul class="p-2" v-if="item.childrens && item.childrens.length > 0">
                                                 <li v-for="(child, ii) in item.childrens" :key="ii">
-                                                    <nuxt-link
-                                                        class="text-xs p-2 m-1 hover:text-green-700 flex"
+                                                    <nuxt-link class="text-xs p-2 m-1 hover:text-green-700 flex"
                                                         :to="child.url">
                                                         {{ child.text }}
                                                     </nuxt-link>
@@ -119,7 +58,7 @@
                                     </div>
                                 </transition>
                             </ul>
-                        </div> -->
+                        </div>
 
                     </div>
 
@@ -161,10 +100,10 @@
 
                     </router-link>
 
-                    <div v-if="header.show_deposit_button"
+                    <nuxt-link to="/contact" v-if="header.show_deposit_button"
                         class="cursor-pointer font-semibold bg py-2 px-3 text-black text-xs hover:text-white duration-10 hover:bg-gray-700 ">
                         {{ header.deposit_button }}
-                    </div>
+                    </nuxt-link>
                 </div>
 
             </nav>
@@ -271,3 +210,343 @@ export default {
     color: #2b2d42;
 }
 </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 'All Collections' DropDown -->
+<!-- <div class="flex flex-row header-menu">
+                            <ul v-for="(item, i) in otherMenu" :key="i" class="flex flex-col relative px-2"
+                                :class="{ 'hovered': item.isClicked }">
+                                <li class="flex flex-row text items-center justify-between w-full rounded-md "
+                                    @click="item.isClicked = !item.isClicked">
+                                    <nuxt-link :to="'/shop'"
+                                        class="w-full flex cursor-pointer hover:text-red-500 transition duration-1000 ease-in-out text-xs">
+                                        {{ item.text }}
+                                    </nuxt-link>
+                                    <button class="text-white p-2"
+                                        @click="activeId = (activeId === item._id) ? null : item._id; closeMenu()">
+                                        <svg v-if="item.childrens && item.childrens.length > 0" class="w-3 transform"
+                                            :class="{ 'rotate-180': item.isClicked }" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px"
+                                            viewBox="0 0 330 330" style=" fill: white;" xml:space="preserve">
+                                            <path
+                                                d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393  c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393  s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z" />
+                                        </svg>
+                                    </button>
+                                </li>
+                                <transition name="slide">
+                                    <div v-if="item.isClicked || item._id == activeId"
+                                        class="bg-gray-50 py-2 px-3 rounded-md absolute top-full"
+                                        style="box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+                                        <div v-for="(child, i) in item.childrens" :key="i" class="">
+                                            <a class="flex p-3 mx-1 rounded-md text-black text-xs mb-2  hover:text-red-500 duration-10 hover:bg-gray-200 "
+                                                :href="child.url">{{ child.text }}</a>
+                                        </div>
+                                    </div>
+                                </transition>
+                            </ul>
+                        </div>
+
+                        <div class="text-xs mx-3 my-6">
+                            <nuxt-link :to="'/marques'"
+                                class=" text-white  hover:text-red-500 transition duration-1000 ease-in-out ">
+                                Marques
+                            </nuxt-link>
+
+                        </div>
+
+                        <div class="text-xs mx-3 my-6">
+                            <nuxt-link :to="'/marques'"
+                                class=" text-white  hover:text-red-500 transition duration-1000 ease-in-out ">
+                                Partenaires
+                            </nuxt-link>
+                        </div>
+
+                        <div class="text-xs mx-3 my-6">
+                            <nuxt-link :to="'/marques'"
+                                class=" text-white  hover:text-red-500 transition duration-1000 ease-in-out ">
+                                FAQ's
+                            </nuxt-link>
+                        </div>
+
+                        <div class="text-xs mx-3 my-6">
+                            <nuxt-link :to="'/marques'"
+                                class=" text-white  hover:text-red-500 transition duration-1000 ease-in-out ">
+                                Contacts
+                            </nuxt-link>
+                        </div> -->

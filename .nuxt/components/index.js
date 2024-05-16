@@ -11,11 +11,12 @@ export { default as SectionsServices } from '../..\\components\\sections\\Servic
 export { default as SiAppLoader } from '../..\\components\\si\\AppLoader.vue'
 export { default as SiBlog } from '../..\\components\\si\\Blog.vue'
 export { default as SiCarousel } from '../..\\components\\si\\Carousel.vue'
+export { default as SiImage } from '../..\\components\\si\\Image.vue'
 export { default as SiLoader } from '../..\\components\\si\\Loader.vue'
 export { default as SiLoaderGlobal } from '../..\\components\\si\\LoaderGlobal.vue'
 export { default as SiPriceRange } from '../..\\components\\si\\PriceRange.vue'
 export { default as SiProduct } from '../..\\components\\si\\Product.vue'
-export { default as SiProductCart } from '../..\\components\\si\\ProductCart.vue'
+export { default as SiProductcart } from '../..\\components\\si\\Productcart.vue'
 export { default as SiProductDetails } from '../..\\components\\si\\ProductDetails.vue'
 
 // nuxt/nuxt.js#8607
